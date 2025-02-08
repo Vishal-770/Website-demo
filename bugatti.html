@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wall Street Wheels</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="newlogo.jpg">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Background Image for Desktop */
+    @media (min-width: 768px) {
+      body {
+        background-image: url(images/bugattibgimagepc.jpeg);
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed; /* Fixed background */
+        background-repeat: no-repeat;
+      }
+    }
+
+    /* Background Image for Mobile */
+    @media (max-width: 767px) {
+      body {
+        background-image: url(images/bugattibg_imagemobile.jpeg);
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed; /* Fixed background */
+        background-repeat: no-repeat;
+      }
+    }
+
+    .navbar {
+      background: linear-gradient(to bottom right, #000000, #000000); 
+      backdrop-filter: blur(5px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar-brand, .navbar-nav .nav-link {
+      color: #fff;
+    }
+    .bmw {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 1rem;
+      padding: 20px;
+    }
+    .card {
+      flex: 0 1 18rem;
+      background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    #logo{
+      height:50px;
+      width:50px;
+    }
+    .navbar-brand:hover{
+      color: #bbbbbb;
+    }
+    .navbar-brand:active{
+      color:rgb(242, 138, 138);
+    }
+    .navbar-brand:visited{
+      color:rgb(255, 255, 255);
+    }
+    .car-body{
+      background-color: #000000;
+    }
+    #booktest{
+      background-color: #6cbc5c;
+    }
+    #booktest:hover{
+      background-color: #639e57;
+    }
+    #Search{
+      background-color: #6cbc5c;
+      color:white;
+    }
+    #Search:hover{
+      background-color: #639e57;
+    }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+    }
+    #Home{
+      color:white;
+    }
+    #Home:hover{
+      color:rgb(175, 170, 170);
+    }
+    #About{
+      color:white;
+    }
+    #About:hover{
+      color:rgb(175, 170, 170);
+    }
+    #Brands{
+      color:white;
+    }
+    #Brands:hover{
+      color:rgb(175, 170, 170);
+    }
+    .dropdown-item{
+      color: white;
+    }
+    #brandname{
+      color:white;
+    }
+    #brandname:hover{
+      color:rgb(175, 170, 170);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <img id="logo" src="newlogo.jpg" alt="wall Street wheels logo">
+      <pre>  </pre>
+      <a id="brandname"  class="navbar-brand" href="index.html">Wall Street Wheels</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a id="Home" class="nav-link active" aria-current="page" href="index.html" >Home</a>
+          </li>
+          <li class="nav-item">
+            <a id="About" class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a id="Brands" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Brands
+            </a>
+            <ul style="background-color: #1b1a1a;"  id="dropdown-brands" class="dropdown-menu">
+              <li><a class="dropdown-item" href="bmw.html">BMW</a></li>
+              <li><a class="dropdown-item" href="audi.html">Audi</a></li>
+              <li><a class="dropdown-item" href="mercedes.html">Mercedes</a></li>
+              <li><a class="dropdown-item" href="bugatti.html">Bugatti</a></li>
+              <li><a class="dropdown-item" href="porsche.html">Porsche</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- Search and Book Test Drive Buttons -->
+        <div class="d-flex">
+          <form class="d-flex me-2" role="search" id="searchForm">
+            <input class="form-control me-2" type="search" id="searchInput" placeholder="Search" aria-label="Search">
+            <button id="Search" class="btn btn-outline-success" type="submit" aria-label="Search">Search</button>
+          </form>
+          <button id="booktest" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#testDriveModal">Book Test Drive</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Modal for Book Test Drive -->
+  <div class="modal fade" id="testDriveModal" tabindex="-1" aria-labelledby="testDriveModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="testDriveModalLabel">Book a Test Drive</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modalBody">
+          <form id="testDriveForm">
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" required>
+            </div>
+            <div class="mb-3">
+              <label for="carModel" class="form-label">Car Model</label>
+              <select class="form-select" id="carModel" required>
+                <option value="">Select a car model</option>
+                <option value="bmw">BMW</option>
+                <option value="audi">Audi</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="bugatti">Bugatti</option>
+                <option value="porsche">Porsche</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer" id="modalFooter">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="submitButton">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <!-- Card Container -->
+  <div class="bmw">
+    <!-- Bugatti EB110 SuperSport -->
+    <div class="card">
+      <img src="images/bugatti/1993-Bugatti-EB110-SuperSport-006-1536.jpg" class="card-img-top" alt="Bugatti EB110 SuperSport">
+      <div class="card-body">
+        <h5 class="card-title">Bugatti EB110 SuperSport - $2,500,000</h5>
+        <p class="card-text">The Bugatti EB110 SuperSport is a legendary supercar from the 1990s, known for its quad-turbocharged engine and stunning performance.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Bugatti EB110 SuperSport"
+          data-year="1993"
+          data-owner="James Carter"
+          data-mileage="15,000 km"
+          data-engine="3.5L Quad-Turbocharged V12"
+          data-transmission="6-Speed Manual"
+          data-color="Blue"
+          data-features="Carbon Fiber Body, All-Wheel Drive, Racing Seats">
+          View Details
+        </button>
+      </div>
+    </div>
+
+    <!-- Bugatti Veyron L'Or Blanc -->
+    <div class="card">
+      <img src="images/bugatti/2011_Bugatti_164VeyronLOrBlanc1-770x513.jpg" class="card-img-top" alt="Bugatti Veyron L'Or Blanc">
+      <div class="card-body">
+        <h5 class="card-title">Bugatti Veyron L'Or Blanc - $3,000,000</h5>
+        <p class="card-text">The Bugatti Veyron L'Or Blanc is a unique edition of the Veyron, featuring a ceramic-inspired design and unparalleled performance.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Bugatti Veyron L'Or Blanc"
+          data-year="2011"
+          data-owner="Emily Johnson"
+          data-mileage="8,000 km"
+          data-engine="8.0L Quad-Turbocharged W16"
+          data-transmission="7-Speed Dual-Clutch Automatic"
+          data-color="White"
+          data-features="Ceramic Accents, Premium Leather Interior, Top Speed of 407 km/h">
+          View Details
+        </button>
+      </div>
+    </div>
+
+    <!-- Bugatti La Voiture Noire -->
+    <div class="card">
+      <img src="images/bugatti/bugatti la voiture noire.jpg" class="card-img-top" alt="Bugatti La Voiture Noire">
+      <div class="card-body">
+        <h5 class="card-title">Bugatti La Voiture Noire - $18,000,000</h5>
+        <p class="card-text">The Bugatti La Voiture Noire is a one-of-a-kind masterpiece, paying homage to Bugatti's iconic Type 57 SC Atlantic.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Bugatti La Voiture Noire"
+          data-year="2019"
+          data-owner="Anonymous"
+          data-mileage="500 km"
+          data-engine="8.0L Quad-Turbocharged W16"
+          data-transmission="7-Speed Dual-Clutch Automatic"
+          data-color="Black"
+          data-features="Handcrafted Design, Carbon Fiber Body, Exclusive Interior">
+          View Details
+        </button>
+      </div>
+    </div>
+
+    <!-- Bugatti Veyron -->
+    <div class="card">
+      <img src="images/bugatti/Bugatti Veyron.jpg" class="card-img-top" alt="Bugatti Veyron">
+      <div class="card-body">
+        <h5 class="card-title">Bugatti Veyron - $2,500,000</h5>
+        <p class="card-text">The Bugatti Veyron redefined the supercar world with its groundbreaking speed and engineering.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Bugatti Veyron"
+          data-year="2010"
+          data-owner="Michael Brown"
+          data-mileage="12,000 km"
+          data-engine="8.0L Quad-Turbocharged W16"
+          data-transmission="7-Speed Dual-Clutch Automatic"
+          data-color="Red"
+          data-features="Top Speed of 407 km/h, All-Wheel Drive, Luxurious Interior">
+          View Details
+        </button>
+      </div>
+    </div>
+
+    <!-- Bugatti Bolide -->
+    <div class="card">
+      <img src="images/bugatti/Bugatti-Bolide.jpg" class="card-img-top" alt="Bugatti Bolide">
+      <div class="card-body">
+        <h5 class="card-title">Bugatti Bolide - $4,000,000</h5>
+        <p class="card-text">The Bugatti Bolide is a track-focused hypercar, designed for extreme performance and lightweight construction.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Bugatti Bolide"
+          data-year="2024"
+          data-owner="Alex Turner"
+          data-mileage="0 km"
+          data-engine="8.0L Quad-Turbocharged W16"
+          data-transmission="7-Speed Dual-Clutch Automatic"
+          data-color="Orange"
+          data-features="Track-Optimized Aerodynamics, Carbon Fiber Monocoque, Racing Seats">
+          View Details
+        </button>
+      </div>
+    </div>
+
+    <!-- Bugatti W16 Mistral -->
+    <div class="card">
+      <img src="images/bugatti/Bugatti-W16-Mistral.jpg" class="card-img-top" alt="Bugatti W16 Mistral">
+      <div class="card-body">
+        <h5 class="card-title">Bugatti W16 Mistral - $5,000,000</h5>
+        <p class="card-text">The Bugatti W16 Mistral is the ultimate open-top hypercar, combining breathtaking design with unmatched performance.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Bugatti W16 Mistral"
+          data-year="2024"
+          data-owner="Sarah Lee"
+          data-mileage="0 km"
+          data-engine="8.0L Quad-Turbocharged W16"
+          data-transmission="7-Speed Dual-Clutch Automatic"
+          data-color="Yellow"
+          data-features="Convertible Roof, Carbon Fiber Body, Premium Interior">
+          View Details
+        </button>
+      </div>
+    </div>
+
+    <!-- Bugatti Centodieci -->
+    <div class="card">
+      <img src="images/bugatti/The Bugatti Centodieci..jpg" class="card-img-top" alt="Bugatti Centodieci">
+      <div class="card-body">
+        <h5 class="card-title">Bugatti Centodieci - $9,000,000</h5>
+        <p class="card-text">The Bugatti Centodieci is a tribute to the iconic EB110, blending modern technology with classic design.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Bugatti Centodieci"
+          data-year="2022"
+          data-owner="David Wilson"
+          data-mileage="1,000 km"
+          data-engine="8.0L Quad-Turbocharged W16"
+          data-transmission="7-Speed Dual-Clutch Automatic"
+          data-color="White"
+          data-features="Limited Edition, Carbon Fiber Body, Premium Interior">
+          View Details
+        </button>
+      </div>
+    </div>
+
+    <!-- Bugatti Divo -->
+    <div class="card">
+      <img src="images/bugatti/The Bugatti Divo.jpg" class="card-img-top" alt="Bugatti Divo">
+      <div class="card-body">
+        <h5 class="card-title">Bugatti Divo - $6,000,000</h5>
+        <p class="card-text">The Bugatti Divo is a hypercar designed for agility and handling, offering a unique driving experience.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Bugatti Divo"
+          data-year="2021"
+          data-owner="Chris Evans"
+          data-mileage="2,000 km"
+          data-engine="8.0L Quad-Turbocharged W16"
+          data-transmission="7-Speed Dual-Clutch Automatic"
+          data-color="Grey"
+          data-features="Track-Focused Design, Carbon Fiber Body, Premium Interior">
+          View Details
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <!-- Car Details Modal -->
+  <div class="modal fade" id="carDetailsModal" tabindex="-1" aria-labelledby="carDetailsModalLabel">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="carDetailsModalLabel">Car Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Year of Manufacture:</strong> <span id="carYear"></span></p>
+          <p><strong>Owner:</strong> <span id="carOwner"></span></p>
+          <p><strong>Mileage:</strong> <span id="carMileage"></span></p>
+          <p><strong>Engine:</strong> <span id="carEngine"></span></p>
+          <p><strong>Transmission:</strong> <span id="carTransmission"></span></p>
+          <p><strong>Color:</strong> <span id="carColor"></span></p>
+          <p><strong>Additional Features:</strong> <span id="carFeatures"></span></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const viewDetailsButtons = document.querySelectorAll(".view-details-btn");
+
+      viewDetailsButtons.forEach(button => {
+        button.addEventListener("click", function () {
+          // Get modal elements
+          const modalTitle = document.getElementById("carDetailsModalLabel");
+          const carYear = document.getElementById("carYear");
+          const carOwner = document.getElementById("carOwner");
+          const carMileage = document.getElementById("carMileage");
+          const carEngine = document.getElementById("carEngine");
+          const carTransmission = document.getElementById("carTransmission");
+          const carColor = document.getElementById("carColor");
+          const carFeatures = document.getElementById("carFeatures");
+
+          // Retrieve data attributes
+          modalTitle.textContent = this.getAttribute("data-title") + " Details";
+          carYear.textContent = this.getAttribute("data-year");
+          carOwner.textContent = this.getAttribute("data-owner");
+          carMileage.textContent = this.getAttribute("data-mileage");
+          carEngine.textContent = this.getAttribute("data-engine");
+          carTransmission.textContent = this.getAttribute("data-transmission");
+          carColor.textContent = this.getAttribute("data-color");
+          carFeatures.textContent = this.getAttribute("data-features");
+        });
+      });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      // Search functionality
+      const searchForm = document.getElementById("searchForm");
+      const searchInput = document.getElementById("searchInput");
+
+      searchForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const searchTerm = searchInput.value.trim().toLowerCase(); // Get the search term and convert to lowercase
+
+        // Redirect based on the search term
+        switch (searchTerm) {
+          case "mercedes":
+            window.location.href = "mercedes.html";
+            break;
+          case "audi":
+            window.location.href = "audi.html";
+            break;
+          case "porsche":
+            window.location.href = "porsche.html";
+            break;
+          case "bmw":
+            window.location.href = "bmw.html";
+            break;
+          case "bugatti":
+            window.location.href = "bugatti.html";
+            break;
+          default:
+            alert("No matching brand found. Please try again.");
+            break;
+        }
+      });
+
+      // Test Drive Form Submission
+      const submitButton = document.getElementById("submitButton");
+      const testDriveForm = document.getElementById("testDriveForm");
+      const modalBody = document.getElementById("modalBody");
+      const modalFooter = document.getElementById("modalFooter");
+
+      submitButton.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        if (testDriveForm.checkValidity()) {
+          const formData = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            phone: document.getElementById("phone").value,
+            carModel: document.getElementById("carModel").value,
+          };
+
+          // Simulate form submission (replace this with an actual API call)
+          setTimeout(() => {
+            // Replace the form with a confirmation message
+            modalBody.innerHTML = ` 
+              <div class="alert alert-success" role="alert">
+                <h4 class="alert-heading">Thank you!</h4>
+                <p>Your request has been sent. Our representative will contact you shortly.</p>
+                <hr>
+                <p class="mb-0">We look forward to seeing you for your test drive!</p>
+              </div>
+            `;
+
+            // Remove the modal footer (Submit and Close buttons)
+            modalFooter.remove();
+
+            // Close the modal after 5 seconds
+            setTimeout(() => {
+              const modalElement = document.getElementById("testDriveModal");
+              const modal = bootstrap.Modal.getInstance(modalElement); // Get the modal instance
+              modal.hide(); // Hide the modal
+            }, 5000); // Close after 5 seconds
+          }, 1000); // Simulate a 1-second delay for the request
+        } else {
+          // If the form is invalid, trigger the browser's validation messages
+          testDriveForm.reportValidity();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
