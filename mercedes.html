@@ -36,6 +36,10 @@
         background-attachment: fixed; /* Fixed background */
         background-repeat: no-repeat;
       }
+      #brandname{
+        transform:translateX(-5vw);
+      }
+
     }
 
     .navbar {
@@ -122,6 +126,44 @@
     #brandname:hover{
       color:rgb(175, 170, 170);
     }
+    .card{
+      background-color: #0000007d;
+      color: white;
+    }
+    .btn{
+      background-color: #639e57;
+      border-color: #639e57;
+    }
+    .btn:hover{
+      background-color: #6cbc5c;
+      border-color: #639e57;
+    }
+    .card {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 992px)and (min-width: 578px){
+      .navbar .d-flex {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .navbar .btn-primary {
+        width: 100%;
+      }
+      #brandname{
+        transform:translateX(-9vw);
+      }
+    }
+    .modal-content {
+      color: white;
+      background-color: #0000008f;
+    }
+
   </style>
 </head>
 <body>
@@ -141,7 +183,7 @@
             <a id="Home" class="nav-link active" aria-current="page" href="index.html" >Home</a>
           </li>
           <li class="nav-item">
-            <a id="About" class="nav-link" href="#">About</a>
+            <a id="About" class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item dropdown">
             <a id="Brands" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -213,165 +255,165 @@
 
   <br>
 
-    <!-- Card Container -->
-    <div class="bmw">
-      <!-- Car Card Example -->
-      <div class="card">
-        <img src="images/mercedes/mercedes Benz AMG GT 2018.jpg" class="card-img-top" alt="Porsche 911">
-        <div class="card-body">
-          <h5 class="card-title"> Mercedes-Benz AMG GT - $100,000</h5>
-          <p class="card-text">The Mercedes-Benz AMG GT (2018) is a high-performance sports car with a powerful V8 engine, aggressive styling, and track-focused handling.</p>
-          <button class="btn btn-primary view-details-btn" 
-            data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-            data-title="Mercedes-Benz AMG GT "
-            data-year="2018"
-            data-owner="Robert Wilson"
-            data-mileage="20,000 km"
-            data-engine="4.0L Twin-Turbocharged V8"
-            data-transmission=" 7-Speed Dual-Clutch Automatic "
-            data-color="Designo Selenite Grey "
-            data-features="Rear-Wheel Drive, Performance Exhaust, Adaptive Suspension, Premium Leather Interior, Burmester Sound System  ">
-            View Details
-          </button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="images/mercedes/Mercedes Benz C63 S.jpg" class="card-img-top" alt="Porsche 911">
-        <div class="card-body">
-          <h5 class="card-title">Mercedes Benz C63 S - $85,000</h5>
-          <p class="card-text">The Mercedes-Benz C63 S (2022) is a luxury sports sedan with a powerful twin-turbo V8, aggressive design, and high-end interior features.</p>
-          <button class="btn btn-primary view-details-btn" 
-            data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-            data-title="Mercedes Benz C63 S"
-            data-year="2022"
-            data-owner="Jonathan Parker"
-            data-mileage="12,000 km"
-            data-engine="4.0L Twin-Turbocharged V8 "
-            data-transmission=" 9-Speed Automatic "
-            data-color="Obsidian Black"
-            data-features="AMG Performance Exhaust, Adaptive Suspension, Nappa Leather Interior, Panoramic Sunroof, Burmester Sound System  ">
-            View Details
-          </button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="images/mercedes/mercedes benz CLA.jpg" class="card-img-top" alt="Porsche 911">
-        <div class="card-body">
-          <h5 class="card-title">Mercedes-Benz CLA (2023) - $50,000</h5>
-          <p class="card-text">The Mercedes-Benz CLA (2023) is a stylish luxury sedan with a sporty turbocharged engine, modern technology, and premium comfort features.</p>
-          <button class="btn btn-primary view-details-btn" 
-            data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-            data-title="Mercedes-Benz CLA (2023)  "
-            data-year="2023"
-            data-owner="Sophia Reynolds"
-            data-mileage="10,000 km"
-            data-engine="2.0L Turbocharged Inline-4  
-            "
-            data-transmission="7-Speed Dual-Clutch Automatic "
-            data-color="Black"
-            data-features="AMG-Line Package, Panoramic Sunroof, MBUX Infotainment System, Adaptive Cruise Control, Burmester Sound System ">
-            View Details
-          </button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="images/mercedes/mercedes benz Eclass.webp" class="card-img-top" alt="Porsche 911">
-        <div class="card-body">
-          <h5 class="card-title">Mercedes-Benz E-Class (2023) - $65,000</h5>
-          <p class="card-text">The Mercedes-Benz E-Class (2023) is a premium luxury sedan with a smooth turbocharged engine, advanced technology, and refined interior comfort.</p>
-          <button class="btn btn-primary view-details-btn" 
-            data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-            data-title="Mercedes-Benz E-Class (2023)"
-            data-year="2023"
-            data-owner="William Carter"
-            data-mileage="8,000 km"
-            data-engine="3.0L Turbocharged Inline-6 with Mild Hybrid "
-            data-transmission="9-Speed Automatic"
-            data-color="Grey White"
-            data-features="MBUX Infotainment System, Burmester 3D Sound, Panoramic Sunroof, Adaptive Air Suspension, Ambient Lighting  ">
-            View Details
-          </button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="images/mercedes/Mercedes benz Gclass.jpg" class="card-img-top" alt="Porsche 911">
-        <div class="card-body">
-          <h5 class="card-title">Mercedes-Benz G-Class (2023) - $150,000</h5>
-          <p class="card-text">The Mercedes-Benz G-Class (2023) is a luxury off-road SUV with a powerful V8 engine, rugged design, and a high-end, tech-filled interior.</p>
-          <button class="btn btn-primary view-details-btn" 
-            data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-            data-title="Mercedes-Benz G-Class (2023)"
-            data-year="2023"
-            data-owner="Christopher Johnson "
-            data-mileage="5,000 km"
-            data-engine="4.0L Twin-Turbocharged V8"
-            data-transmission=" 9-Speed Automatic  "
-            data-color="Night Black Magno  "
-            data-features="4MATIC All-Wheel Drive, Adaptive Suspension, Nappa Leather Interior, Burmester Surround Sound, Off-Road Package  ">
-            View Details
-          </button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="images/mercedes/mercedes benz GLE SUV.jpg" class="card-img-top" alt="Porsche 911">
-        <div class="card-body">
-          <h5 class="card-title">Mercedes-Benz GLE SUV (2023) - $75,000</h5>
-          <p class="card-text">The Porsche 911 is a high-performance sports car known for its iconic design.</p>
-          <button class="btn btn-primary view-details-btn" 
-            data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-            data-title="Mercedes-Benz GLE SUV (2023)"
-            data-year="2023"
-            data-owner="Daniel Thompson "
-            data-mileage="10,000 km"
-            data-engine="3.0L Turbocharged Inline-6 with Mild Hybrid "
-            data-transmission="9-Speed Automatic"
-            data-color="Dark Blue"
-            data-features="4MATIC All-Wheel Drive, MBUX Infotainment System, Panoramic Sunroof, AIRMATIC Suspension, Burmester Surround Sound">
-            View Details
-          </button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="images/mercedes/Mercedes C-class.jpg" class="card-img-top" alt="Porsche 911">
-        <div class="card-body">
-          <h5 class="card-title">Mercedes-Benz C-Class (2023) - $50,000</h5>
-          <p class="card-text">The Mercedes-Benz C-Class (2023) is a stylish luxury sedan with a refined turbocharged engine, high-tech features, and a premium interior.</p>
-          <button class="btn btn-primary view-details-btn" 
-            data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-            data-title="Mercedes-Benz C-Class (2023)"
-            data-year="2023"
-            data-owner="Emma Roberts"
-            data-mileage="9,000 km"
-            data-engine="2.0L Turbocharged Inline-4 with Mild Hybrid"
-            data-transmission=" 9-Speed Automatic "
-            data-color="Polar White"
-            data-features="MBUX Infotainment System, Panoramic Sunroof, Burmester Surround Sound, Adaptive Cruise Control, AMG-Line Package  ">
-            View Details
-          </button>
-        </div>
-      </div>
-  
-  
-      <div class="card">
-        <img src="images/mercedes/mercedes maybach.jpg" class="card-img-top" alt="BMW M5">
-        <div class="card-body">
-          <h5 class="card-title">Mercedes-Maybach S-Class (2023) - $200,000</h5>
-          <p class="card-text">The Mercedes-Maybach S-Class (2023) is the pinnacle of luxury, offering a smooth ride, ultra-premium interior, and advanced technology for the ultimate comfort.</p>
-          <button class="btn btn-primary view-details-btn" 
-            data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-            data-title="Mercedes-Maybach S-Class (2023)"
-            data-year="2023"
-            data-owner="Richard Anderson"
-            data-mileage="5,000 km"
-            data-engine="4.0L Twin-Turbocharged V8 / 6.0L Twin-Turbocharged V12  "
-            data-transmission="9-Speed Automatic"
-            data-color="Obsidian Black"
-            data-features="Executive Rear Seats, MBUX Hyperscreen, Burmester 4D Sound, Adaptive Air Suspension, Panoramic Sunroof, Chauffeur Package  ">
-            View Details
-          </button>
-        </div>
+  <!-- Card Container -->
+  <div class="bmw">
+    <!-- Car Card Example -->
+    <div class="card">
+      <img src="images/mercedes/mercedes Benz AMG GT 2018.jpg" class="card-img-top" alt="Porsche 911">
+      <div class="card-body">
+        <h5 class="card-title"> Mercedes-Benz AMG GT - $100,000</h5>
+        <p class="card-text">The Mercedes-Benz AMG GT (2018) is a high-performance sports car with a powerful V8 engine, aggressive styling, and track-focused handling.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Mercedes-Benz AMG GT "
+          data-year="2018"
+          data-owner="Robert Wilson"
+          data-mileage="20,000 km"
+          data-engine="4.0L Twin-Turbocharged V8"
+          data-transmission=" 7-Speed Dual-Clutch Automatic "
+          data-color="Designo Selenite Grey "
+          data-features="Rear-Wheel Drive, Performance Exhaust, Adaptive Suspension, Premium Leather Interior, Burmester Sound System  ">
+          View Details
+        </button>
       </div>
     </div>
+    <div class="card">
+      <img src="images/mercedes/Mercedes Benz C63 S.jpg" class="card-img-top" alt="Porsche 911">
+      <div class="card-body">
+        <h5 class="card-title">Mercedes Benz C63 S - $85,000</h5>
+        <p class="card-text">The Mercedes-Benz C63 S (2022) is a luxury sports sedan with a powerful twin-turbo V8, aggressive design, and high-end interior features.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Mercedes Benz C63 S"
+          data-year="2022"
+          data-owner="Jonathan Parker"
+          data-mileage="12,000 km"
+          data-engine="4.0L Twin-Turbocharged V8 "
+          data-transmission=" 9-Speed Automatic "
+          data-color="Obsidian Black"
+          data-features="AMG Performance Exhaust, Adaptive Suspension, Nappa Leather Interior, Panoramic Sunroof, Burmester Sound System  ">
+          View Details
+        </button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/mercedes/mercedes benz CLA.jpg" class="card-img-top" alt="Porsche 911">
+      <div class="card-body">
+        <h5 class="card-title">Mercedes-Benz CLA (2023) - $50,000</h5>
+        <p class="card-text">The Mercedes-Benz CLA (2023) is a stylish luxury sedan with a sporty turbocharged engine, modern technology, and premium comfort features.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Mercedes-Benz CLA (2023)  "
+          data-year="2023"
+          data-owner="Sophia Reynolds"
+          data-mileage="10,000 km"
+          data-engine="2.0L Turbocharged Inline-4  
+          "
+          data-transmission="7-Speed Dual-Clutch Automatic "
+          data-color="Black"
+          data-features="AMG-Line Package, Panoramic Sunroof, MBUX Infotainment System, Adaptive Cruise Control, Burmester Sound System ">
+          View Details
+        </button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/mercedes/mercedes benz Eclass.webp" class="card-img-top" alt="Porsche 911">
+      <div class="card-body">
+        <h5 class="card-title">Mercedes-Benz E-Class (2023) - $65,000</h5>
+        <p class="card-text">The Mercedes-Benz E-Class (2023) is a premium luxury sedan with a smooth turbocharged engine, advanced technology, and refined interior comfort.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Mercedes-Benz E-Class (2023)"
+          data-year="2023"
+          data-owner="William Carter"
+          data-mileage="8,000 km"
+          data-engine="3.0L Turbocharged Inline-6 with Mild Hybrid "
+          data-transmission="9-Speed Automatic"
+          data-color="Grey White"
+          data-features="MBUX Infotainment System, Burmester 3D Sound, Panoramic Sunroof, Adaptive Air Suspension, Ambient Lighting  ">
+          View Details
+        </button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/mercedes/Mercedes benz Gclass.jpg" class="card-img-top" alt="Porsche 911">
+      <div class="card-body">
+        <h5 class="card-title">Mercedes-Benz G-Class (2023) - $150,000</h5>
+        <p class="card-text">The Mercedes-Benz G-Class (2023) is a luxury off-road SUV with a powerful V8 engine, rugged design, and a high-end, tech-filled interior.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Mercedes-Benz G-Class (2023)"
+          data-year="2023"
+          data-owner="Christopher Johnson "
+          data-mileage="5,000 km"
+          data-engine="4.0L Twin-Turbocharged V8"
+          data-transmission=" 9-Speed Automatic  "
+          data-color="Night Black Magno  "
+          data-features="4MATIC All-Wheel Drive, Adaptive Suspension, Nappa Leather Interior, Burmester Surround Sound, Off-Road Package  ">
+          View Details
+        </button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/mercedes/mercedes benz GLE SUV.jpg" class="card-img-top" alt="Porsche 911">
+      <div class="card-body">
+        <h5 class="card-title">Mercedes-Benz GLE SUV (2023) - $75,000</h5>
+        <p class="card-text">The Porsche 911 is a high-performance sports car known for its iconic design.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Mercedes-Benz GLE SUV (2023)"
+          data-year="2023"
+          data-owner="Daniel Thompson "
+          data-mileage="10,000 km"
+          data-engine="3.0L Turbocharged Inline-6 with Mild Hybrid "
+          data-transmission="9-Speed Automatic"
+          data-color="Dark Blue"
+          data-features="4MATIC All-Wheel Drive, MBUX Infotainment System, Panoramic Sunroof, AIRMATIC Suspension, Burmester Surround Sound">
+          View Details
+        </button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="images/mercedes/Mercedes C-class.jpg" class="card-img-top" alt="Porsche 911">
+      <div class="card-body">
+        <h5 class="card-title">Mercedes-Benz C-Class (2023) - $50,000</h5>
+        <p class="card-text">The Mercedes-Benz C-Class (2023) is a stylish luxury sedan with a refined turbocharged engine, high-tech features, and a premium interior.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Mercedes-Benz C-Class (2023)"
+          data-year="2023"
+          data-owner="Emma Roberts"
+          data-mileage="9,000 km"
+          data-engine="2.0L Turbocharged Inline-4 with Mild Hybrid"
+          data-transmission=" 9-Speed Automatic "
+          data-color="Polar White"
+          data-features="MBUX Infotainment System, Panoramic Sunroof, Burmester Surround Sound, Adaptive Cruise Control, AMG-Line Package  ">
+          View Details
+        </button>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <img src="images/mercedes/mercedes maybach.jpg" class="card-img-top" alt="BMW M5">
+      <div class="card-body">
+        <h5 class="card-title">Mercedes-Maybach S-Class (2023) - $200,000</h5>
+        <p class="card-text">The Mercedes-Maybach S-Class (2023) is the pinnacle of luxury, offering a smooth ride, ultra-premium interior, and advanced technology for the ultimate comfort.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Mercedes-Maybach S-Class (2023)"
+          data-year="2023"
+          data-owner="Richard Anderson"
+          data-mileage="5,000 km"
+          data-engine="4.0L Twin-Turbocharged V8 / 6.0L Twin-Turbocharged V12  "
+          data-transmission="9-Speed Automatic"
+          data-color="Obsidian Black"
+          data-features="Executive Rear Seats, MBUX Hyperscreen, Burmester 4D Sound, Adaptive Air Suspension, Panoramic Sunroof, Chauffeur Package  ">
+          View Details
+        </button>
+      </div>
+    </div>
+  </div>
 
   <br>
 

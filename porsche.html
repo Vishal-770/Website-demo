@@ -36,6 +36,10 @@
         background-attachment: fixed; /* Fixed background */
         background-repeat: no-repeat;
       }
+      #brandname{
+        transform:translateX(-5vw);
+      }
+
     }
 
     .navbar {
@@ -122,6 +126,44 @@
     #brandname:hover{
       color:rgb(175, 170, 170);
     }
+    .card{
+      background-color: #0000007d;
+      color: white;
+    }
+    .btn{
+      background-color: #639e57;
+      border-color: #639e57;
+    }
+    .btn:hover{
+      background-color: #6cbc5c;
+      border-color: #639e57;
+    }
+    .card {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 992px)and (min-width: 578px){
+      .navbar .d-flex {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .navbar .btn-primary {
+        width: 100%;
+      }
+      #brandname{
+        transform:translateX(-9vw);
+      }
+    }
+    .modal-content {
+      color: white;
+      background-color: #0000008f;
+    }
+
   </style>
 </head>
 <body>
@@ -141,7 +183,7 @@
             <a id="Home" class="nav-link active" aria-current="page" href="index.html" >Home</a>
           </li>
           <li class="nav-item">
-            <a id="About" class="nav-link" href="#">About</a>
+            <a id="About" class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item dropdown">
             <a id="Brands" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -212,170 +254,170 @@
   </div>
 
   <br>
-
- <!-- Card Container -->
- <div class="bmw">
-  <!-- Car Card Example -->
-  <div class="card">
-    <img src="images/porsche/Macan light blue.webp" class="card-img-top" alt="Porsche Macan">
-    <div class="card-body">
-      <h5 class="card-title">Porsche Macan - $70,000</h5>
-      <p class="card-text">The Porsche Macan is a luxury compact SUV known for its sporty performance and elegant design.</p>
-      <button class="btn btn-primary view-details-btn" 
-        data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-        data-title="Porsche Macan"
-        data-year="2023"
-        data-owner="Laura Smith"
-        data-mileage="5,000 km"
-        data-engine="2.0L Turbocharged Inline-4"
-        data-transmission="7-Speed PDK Automatic"
-        data-color="Light Blue"
-        data-features="Premium Interior, All-Wheel Drive, Panoramic Sunroof">
-        View Details
-      </button>
+  <div class="bmw">
+    <!-- Car Card Example -->
+    <div class="card">
+      <img src="images/porsche/Macan light blue.webp" class="card-img-top" alt="Porsche Macan">
+      <div class="card-body">
+        <h5 class="card-title">Porsche Macan - $70,000</h5>
+        <p class="card-text">The Porsche Macan is a luxury compact SUV known for its sporty performance and elegant design.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Porsche Macan"
+          data-year="2023"
+          data-owner="Laura Smith"
+          data-mileage="5,000 km"
+          data-engine="2.0L Turbocharged Inline-4"
+          data-transmission="7-Speed PDK Automatic"
+          data-color="Light Blue"
+          data-features="Premium Interior, All-Wheel Drive, Panoramic Sunroof">
+          View Details
+        </button>
+      </div>
     </div>
-  </div>
+    
+    <div class="card">
+      <img src="images/porsche/panamera gold.webp" class="card-img-top" alt="Porsche Panamera">
+      <div class="card-body">
+        <h5 class="card-title">Porsche Panamera - $120,000</h5>
+        <p class="card-text">The Porsche Panamera is a luxury sedan that combines performance and comfort in a sleek design.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Porsche Panamera"
+          data-year="2022"
+          data-owner="Michael Brown"
+          data-mileage="8,000 km"
+          data-engine="3.0L Twin-Turbo V6"
+          data-transmission="8-Speed PDK Automatic"
+          data-color="Gold"
+          data-features="Leather Seats, Adaptive Air Suspension, Premium Sound System">
+          View Details
+        </button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="images/porsche/Porsche 911 GT3 RS grey.jpg" class="card-img-top" alt="Porsche 911 GT3 RS">
+      <div class="card-body">
+        <h5 class="card-title">Porsche 911 GT3 RS - $250,000</h5>
+        <p class="card-text">The Porsche 911 GT3 RS is a track-focused sports car designed for ultimate performance and precision.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Porsche 911 GT3 RS"
+          data-year="2023"
+          data-owner="Chris Evans"
+          data-mileage="2,000 km"
+          data-engine="4.0L Naturally Aspirated Flat-6"
+          data-transmission="7-Speed PDK Automatic"
+          data-color="Grey"
+          data-features="Carbon Fiber Body, Racing Seats, Aerodynamic Package">
+          View Details
+        </button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="images/porsche/porsche 918 metal gray.jpg" class="card-img-top" alt="Porsche 918 Spyder">
+      <div class="card-body">
+        <h5 class="card-title">Porsche 918 Spyder - $1,000,000</h5>
+        <p class="card-text">The Porsche 918 Spyder is a hybrid hypercar that combines cutting-edge technology with breathtaking performance.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Porsche 918 Spyder"
+          data-year="2015"
+          data-owner="David Wilson"
+          data-mileage="3,000 km"
+          data-engine="4.6L V8 Hybrid"
+          data-transmission="7-Speed PDK Automatic"
+          data-color="Metal Gray"
+          data-features="Hybrid Powertrain, Carbon Fiber Body, Adaptive Aerodynamics">
+          View Details
+        </button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="images/porsche/porsche 924red.webp" class="card-img-top" alt="Porsche 924">
+      <div class="card-body">
+        <h5 class="card-title">Porsche 924 - $30,000</h5>
+        <p class="card-text">The Porsche 924 is a classic sports car from the 1970s, known for its timeless design and driving experience.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Porsche 924"
+          data-year="1978"
+          data-owner="John Carter"
+          data-mileage="50,000 km"
+          data-engine="2.0L Naturally Aspirated Inline-4"
+          data-transmission="5-Speed Manual"
+          data-color="Red"
+          data-features="Classic Design, Rear-Wheel Drive, Vintage Interior">
+          View Details
+        </button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="images/porsche/porsche 944 grey.webp" class="card-img-top" alt="Porsche 944">
+      <div class="card-body">
+        <h5 class="card-title">Porsche 944 - $35,000</h5>
+        <p class="card-text">The Porsche 944 is a classic sports car from the 1980s, offering a perfect balance of performance and style.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Porsche 944"
+          data-year="1985"
+          data-owner="Emily Johnson"
+          data-mileage="60,000 km"
+          data-engine="2.5L Naturally Aspirated Inline-4"
+          data-transmission="5-Speed Manual"
+          data-color="Grey"
+          data-features="Pop-Up Headlights, Rear-Wheel Drive, Classic Interior">
+          View Details
+        </button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="images/porsche/porsche 968.webp" class="card-img-top" alt="Porsche 968">
+      <div class="card-body">
+        <h5 class="card-title">Porsche 968 - $40,000</h5>
+        <p class="card-text">The Porsche 968 is a classic sports car from the 1990s, known for its refined design and smooth performance.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Porsche 968"
+          data-year="1993"
+          data-owner="Alex Turner"
+          data-mileage="45,000 km"
+          data-engine="3.0L Naturally Aspirated Inline-4"
+          data-transmission="6-Speed Manual"
+          data-color="Black"
+          data-features="Targa Top, Rear-Wheel Drive, Premium Interior">
+          View Details
+        </button>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="images/porsche/porsche cayman Gt4 orange.webp" class="card-img-top" alt="Porsche Cayman GT4">
+      <div class="card-body">
+        <h5 class="card-title">Porsche Cayman GT4 - $120,000</h5>
+        <p class="card-text">The Porsche Cayman GT4 is a high-performance sports car designed for track enthusiasts.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Porsche Cayman GT4"
+          data-year="2022"
+          data-owner="Sarah Lee"
+          data-mileage="3,500 km"
+          data-engine="4.0L Naturally Aspirated Flat-6"
+          data-transmission="6-Speed Manual"
+          data-color="Orange"
+          data-features="Track-Tuned Suspension, Carbon Fiber Package, Racing Seats">
+          View Details
+        </button>
+      </div>
+    </div>
+    </div>
   
-  <div class="card">
-    <img src="images/porsche/panamera gold.webp" class="card-img-top" alt="Porsche Panamera">
-    <div class="card-body">
-      <h5 class="card-title">Porsche Panamera - $120,000</h5>
-      <p class="card-text">The Porsche Panamera is a luxury sedan that combines performance and comfort in a sleek design.</p>
-      <button class="btn btn-primary view-details-btn" 
-        data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-        data-title="Porsche Panamera"
-        data-year="2022"
-        data-owner="Michael Brown"
-        data-mileage="8,000 km"
-        data-engine="3.0L Twin-Turbo V6"
-        data-transmission="8-Speed PDK Automatic"
-        data-color="Gold"
-        data-features="Leather Seats, Adaptive Air Suspension, Premium Sound System">
-        View Details
-      </button>
-    </div>
-  </div>
   
-  <div class="card">
-    <img src="images/porsche/Porsche 911 GT3 RS grey.jpg" class="card-img-top" alt="Porsche 911 GT3 RS">
-    <div class="card-body">
-      <h5 class="card-title">Porsche 911 GT3 RS - $250,000</h5>
-      <p class="card-text">The Porsche 911 GT3 RS is a track-focused sports car designed for ultimate performance and precision.</p>
-      <button class="btn btn-primary view-details-btn" 
-        data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-        data-title="Porsche 911 GT3 RS"
-        data-year="2023"
-        data-owner="Chris Evans"
-        data-mileage="2,000 km"
-        data-engine="4.0L Naturally Aspirated Flat-6"
-        data-transmission="7-Speed PDK Automatic"
-        data-color="Grey"
-        data-features="Carbon Fiber Body, Racing Seats, Aerodynamic Package">
-        View Details
-      </button>
-    </div>
-  </div>
-  
-  <div class="card">
-    <img src="images/porsche/porsche 918 metal gray.jpg" class="card-img-top" alt="Porsche 918 Spyder">
-    <div class="card-body">
-      <h5 class="card-title">Porsche 918 Spyder - $1,000,000</h5>
-      <p class="card-text">The Porsche 918 Spyder is a hybrid hypercar that combines cutting-edge technology with breathtaking performance.</p>
-      <button class="btn btn-primary view-details-btn" 
-        data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-        data-title="Porsche 918 Spyder"
-        data-year="2015"
-        data-owner="David Wilson"
-        data-mileage="3,000 km"
-        data-engine="4.6L V8 Hybrid"
-        data-transmission="7-Speed PDK Automatic"
-        data-color="Metal Gray"
-        data-features="Hybrid Powertrain, Carbon Fiber Body, Adaptive Aerodynamics">
-        View Details
-      </button>
-    </div>
-  </div>
-  
-  <div class="card">
-    <img src="images/porsche/porsche 924red.webp" class="card-img-top" alt="Porsche 924">
-    <div class="card-body">
-      <h5 class="card-title">Porsche 924 - $30,000</h5>
-      <p class="card-text">The Porsche 924 is a classic sports car from the 1970s, known for its timeless design and driving experience.</p>
-      <button class="btn btn-primary view-details-btn" 
-        data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-        data-title="Porsche 924"
-        data-year="1978"
-        data-owner="John Carter"
-        data-mileage="50,000 km"
-        data-engine="2.0L Naturally Aspirated Inline-4"
-        data-transmission="5-Speed Manual"
-        data-color="Red"
-        data-features="Classic Design, Rear-Wheel Drive, Vintage Interior">
-        View Details
-      </button>
-    </div>
-  </div>
-  
-  <div class="card">
-    <img src="images/porsche/porsche 944 grey.webp" class="card-img-top" alt="Porsche 944">
-    <div class="card-body">
-      <h5 class="card-title">Porsche 944 - $35,000</h5>
-      <p class="card-text">The Porsche 944 is a classic sports car from the 1980s, offering a perfect balance of performance and style.</p>
-      <button class="btn btn-primary view-details-btn" 
-        data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-        data-title="Porsche 944"
-        data-year="1985"
-        data-owner="Emily Johnson"
-        data-mileage="60,000 km"
-        data-engine="2.5L Naturally Aspirated Inline-4"
-        data-transmission="5-Speed Manual"
-        data-color="Grey"
-        data-features="Pop-Up Headlights, Rear-Wheel Drive, Classic Interior">
-        View Details
-      </button>
-    </div>
-  </div>
-  
-  <div class="card">
-    <img src="images/porsche/porsche 968.webp" class="card-img-top" alt="Porsche 968">
-    <div class="card-body">
-      <h5 class="card-title">Porsche 968 - $40,000</h5>
-      <p class="card-text">The Porsche 968 is a classic sports car from the 1990s, known for its refined design and smooth performance.</p>
-      <button class="btn btn-primary view-details-btn" 
-        data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-        data-title="Porsche 968"
-        data-year="1993"
-        data-owner="Alex Turner"
-        data-mileage="45,000 km"
-        data-engine="3.0L Naturally Aspirated Inline-4"
-        data-transmission="6-Speed Manual"
-        data-color="Black"
-        data-features="Targa Top, Rear-Wheel Drive, Premium Interior">
-        View Details
-      </button>
-    </div>
-  </div>
-  
-  <div class="card">
-    <img src="images/porsche/porsche cayman Gt4 orange.webp" class="card-img-top" alt="Porsche Cayman GT4">
-    <div class="card-body">
-      <h5 class="card-title">Porsche Cayman GT4 - $120,000</h5>
-      <p class="card-text">The Porsche Cayman GT4 is a high-performance sports car designed for track enthusiasts.</p>
-      <button class="btn btn-primary view-details-btn" 
-        data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-        data-title="Porsche Cayman GT4"
-        data-year="2022"
-        data-owner="Sarah Lee"
-        data-mileage="3,500 km"
-        data-engine="4.0L Naturally Aspirated Flat-6"
-        data-transmission="6-Speed Manual"
-        data-color="Orange"
-        data-features="Track-Tuned Suspension, Carbon Fiber Package, Racing Seats">
-        View Details
-      </button>
-    </div>
-  </div>
-  </div>
 
   <br>
 

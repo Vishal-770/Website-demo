@@ -36,6 +36,10 @@
         background-attachment: fixed; /* Fixed background */
         background-repeat: no-repeat;
       }
+      #brandname{
+        transform:translateX(-5vw);
+      }
+
     }
 
     .navbar {
@@ -122,6 +126,44 @@
     #brandname:hover{
       color:rgb(175, 170, 170);
     }
+    .card{
+      background-color: #0000007d;
+      color: white;
+    }
+    .btn{
+      background-color: #639e57;
+      border-color: #639e57;
+    }
+    .btn:hover{
+      background-color: #6cbc5c;
+      border-color: #639e57;
+    }
+    .card {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 992px)and (min-width: 578px){
+      .navbar .d-flex {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .navbar .btn-primary {
+        width: 100%;
+      }
+      #brandname{
+        transform:translateX(-9vw);
+      }
+    }
+    .modal-content {
+      color: white;
+      background-color: #0000008f;
+    }
+
   </style>
 </head>
 <body>
@@ -141,7 +183,7 @@
             <a id="Home" class="nav-link active" aria-current="page" href="index.html" >Home</a>
           </li>
           <li class="nav-item">
-            <a id="About" class="nav-link" href="#">About</a>
+            <a id="About" class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item dropdown">
             <a id="Brands" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

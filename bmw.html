@@ -36,6 +36,10 @@
         background-attachment: fixed; /* Fixed background */
         background-repeat: no-repeat;
       }
+      #brandname{
+        transform:translateX(-5vw);
+      }
+
     }
 
     .navbar {
@@ -122,6 +126,44 @@
     #brandname:hover{
       color:rgb(175, 170, 170);
     }
+    .card{
+      background-color: #0000007d;
+      color: white;
+    }
+    .btn{
+      background-color: #639e57;
+      border-color: #639e57;
+    }
+    .btn:hover{
+      background-color: #6cbc5c;
+      border-color: #639e57;
+    }
+    .card {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 992px)and (min-width: 578px){
+      .navbar .d-flex {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .navbar .btn-primary {
+        width: 100%;
+      }
+      #brandname{
+        transform:translateX(-9vw);
+      }
+    }
+    .modal-content {
+      color: white;
+      background-color: #0000008f;
+    }
+
   </style>
 </head>
 <body>
@@ -141,7 +183,7 @@
             <a id="Home" class="nav-link active" aria-current="page" href="index.html" >Home</a>
           </li>
           <li class="nav-item">
-            <a id="About" class="nav-link" href="#">About</a>
+            <a id="About" class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item dropdown">
             <a id="Brands" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -212,166 +254,166 @@
   </div>
 
   <br>
-
-    <!-- Card Container -->
-    <div class="bmw">
-      <!-- Car Card Example -->
-      <div class="card">
-        <img src="images/BMW/BMW I8.jpg" class="card-img-top" alt="BMW I8">
-        <div class="card-body">
-          <h5 class="card-title">BMW i8 - $150,000</h5>
-          <p class="card-text">A high-performance hybrid sports car with a futuristic design and advanced aerodynamics.</p>
-          <button class="btn btn-primary view-details-btn" 
-            data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-            data-title="BMW i8 "
-            data-year="2021"
-            data-owner="Michael Roberts"
-            data-mileage="12,000 km"
-            data-engine="1.5L TwinPower Turbo Inline-3 + Electric Motor"
-            data-transmission="6-Speed Automatic"
-            data-color="Crystal White"
-            data-features=" Laser Headlights, Carbon Fiber Reinforced Plastic Body, iDrive System, Premium Leather Upholstery
-            The BMW i8 is a groundbreaking hybrid sports car, combining a sleek design with impressive efficiency and performance. Its futuristic appearance is matched by an advanced powertrain that blends a petrol engine with an electric motor, delivering a dynamic driving experience while maintaining fuel efficiency.">
-            View Details
-          </button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="images/BMW/BMWZ1.jpg" class="card-img-top" alt="Porsche 911">
-        <div class="card-body">
-          <h5 class="card-title">BMW Z1 - $120,000</h5>
-          <p class="card-text">A rare roadster with innovative design and retractable doors.</p>
-          <button class="btn btn-primary view-details-btn" 
-            data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-            data-title="BMW Z1"
-            data-year="1989"
-            data-owner="Michael Smith"
-            data-mileage="10,000 km"
-            data-engine="2.5L Inline-6"
-            data-transmission="5-Speed Manual"
-            data-color="Red"
-            data-features="Retractable doors, Leather interior, Classic design">
-            View Details
-          </button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="images/BMW/BMW Z8.jpg" class="card-img-top" alt="Porsche 911">
-        <div class="card-body">
-          <h5 class="card-title">BMW Z8 - $130,000</h5>
-          <p class="card-text">The BMW Z8 is a classic roadster with a 4.9L V8, sleek design, luxury interior, and powerful performance.</p>
-          <button class="btn btn-primary view-details-btn" 
-            data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-            data-title="BMW Z8"
-            data-year="2003"
-            data-owner="James Anderson"
-            data-mileage="25,000 km"
-            data-engine="4.9L V8"
-            data-transmission="6-Speed Manual"
-            data-color="White"
-            data-features="Aluminum Body, Sport Suspension, Leather Interior, Advanced Sound System">
-            View Details
-          </button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="images/BMW/BMW i7 limousine.jpg" class="card-img-top" alt="Porsche 911">
-        <div class="card-body">
-          <h5 class="card-title">BMW i7 Limousine - $120,000</h5>
-          <p class="card-text">The BMW Z8 is a limited-production roadster with a 4.9L V8 engine, sleek design, and luxurious interior features..</p>
-          <button class="btn btn-primary view-details-btn" 
-            data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-            data-title="BMW i7 Limousine"
-            data-year="2023"
-            data-owner="Laura Williams"
-            data-mileage="3,500 km"
-            data-engine="Electric Motor (Dual Motor All-Wheel Drive)"
-            data-transmission="Single-Speed Automatic"
-            data-color="Sapphire Black"
-            data-features="Luxury Interior, Panoramic Sunroof, Gesture Control, Advanced Driver Assistance Systems, Bowers & Wilkins Sound System">
-            View Details
-          </button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="images/BMW/BMW m3 classic.jpg" class="card-img-top" alt="Porsche 911">
-        <div class="card-body">
-          <h5 class="card-title"> BMW M3 Classic (E30) - $60,000</h5>
-          <p class="card-text">The BMW M3 Classic (E30) is a legendary performance car known for its agile handling, powerful engine, and iconic design.</p>
-          <button class="btn btn-primary view-details-btn" 
-            data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-            data-title="BMW M3 Classic (E30)"
-            data-year="1988"
-            data-owner="Alex Turner"
-            data-mileage="50,000 km"
-            data-engine="2.3L Inline-4"
-            data-transmission="5-Speed Manual"
-            data-color="Red"
-            data-features="port Suspension, Iconic Boxy Design, Recaro Seats, Limited Edition">
-            View Details
-          </button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="images/BMW/BMW M3 2004.jpg" class="card-img-top" alt="Porsche 911">
-        <div class="card-body">
-          <h5 class="card-title">BMW M3 (2004) - $25,000</h5>
-          <p class="card-text">The BMW M3 (2004) is a high-performance sports car with a powerful inline-6 engine, precise handling, and iconic styling.</p>
-          <button class="btn btn-primary view-details-btn" 
-            data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-            data-title="BMW M3 (2004)"
-            data-year="2004"
-            data-owner="Ryan Johnson"
-            data-mileage="80,000 km"
-            data-engine="3.2L Inline-6 (S54)"
-            data-transmission="6-Speed Manual"
-            data-color="Crystal White"
-            data-features="Sports Seats, M Aerodynamics Package, Xenon Headlights, Upgraded Audio System">
-            View Details
-          </button>
-        </div>
-      </div>
-      <div class="card">
-        <img src="images/BMW/BMW x3.jpg" class="card-img-top" alt="Porsche 911">
-        <div class="card-body">
-          <h5 class="card-title"> BMW X3 (2022) - $50,000</h5>
-          <p class="card-text">The BMW X3 (2022) offers a perfect balance of luxury and practicality with a turbocharged engine, spacious interior, and all-wheel drive.</p>
-          <button class="btn btn-primary view-details-btn" 
-            data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-            data-title="Porsche 911"
-            data-year="2022"
-            data-owner="Sarah Williams"
-            data-mileage="15,000 km"
-            data-engine="2.0L Turbocharged Inline-4"
-            data-transmission="8-Speed  Automatic"
-            data-color="Mineral White"
-            data-features="xDrive All-Wheel Drive, Panoramic Sunroof, Premium Interior, Advanced Driver Assistance Features">
-            View Details
-          </button>
-        </div>
-      </div>
-      
-  
-      <div class="card">
-        <img src="images/BMW/BMW m1.jpg" class="card-img-top" alt="BMW M5">
-        <div class="card-body">
-          <h5 class="card-title">BMW M1 - $150,000</h5>
-          <p class="card-text">The BMW M1 (1981) is a rare, mid-engine sports car with a 3.5L inline-6, offering exceptional performance and timeless design.nce.</p>
-          <button class="btn btn-primary view-details-btn" 
-            data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-            data-title="BMW M1"
-            data-year="1981"
-            data-owner="David Foster"
-            data-mileage="30,000 km"
-            data-engine="3.5L Inline-6 (M88)"
-            data-transmission="5-Speed Manual"
-            data-color="Red"
-            data-features="Mid-Engine Layout, Iconic Design, Motorsport Heritage, Leather Interior">
-            View Details
-          </button>
-        </div>
-      </div>
+ <!-- Card Container -->
+ <div class="bmw">
+  <!-- Car Card Example -->
+  <div class="card">
+    <img src="images/BMW/BMW I8.jpg" class="card-img-top" alt="BMW I8">
+    <div class="card-body">
+      <h5 class="card-title">BMW i8 - $150,000</h5>
+      <p class="card-text">A high-performance hybrid sports car with a futuristic design and advanced aerodynamics.</p>
+      <button class="btn btn-primary view-details-btn" 
+        data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+        data-title="BMW i8 "
+        data-year="2021"
+        data-owner="Michael Roberts"
+        data-mileage="12,000 km"
+        data-engine="1.5L TwinPower Turbo Inline-3 + Electric Motor"
+        data-transmission="6-Speed Automatic"
+        data-color="Crystal White"
+        data-features=" Laser Headlights, Carbon Fiber Reinforced Plastic Body, iDrive System, Premium Leather Upholstery
+        The BMW i8 is a groundbreaking hybrid sports car, combining a sleek design with impressive efficiency and performance. Its futuristic appearance is matched by an advanced powertrain that blends a petrol engine with an electric motor, delivering a dynamic driving experience while maintaining fuel efficiency.">
+        View Details
+      </button>
     </div>
+  </div>
+  <div class="card">
+    <img src="images/BMW/BMWZ1.jpg" class="card-img-top" alt="Porsche 911">
+    <div class="card-body">
+      <h5 class="card-title">BMW Z1 - $120,000</h5>
+      <p class="card-text">A rare roadster with innovative design and retractable doors.</p>
+      <button class="btn btn-primary view-details-btn" 
+        data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+        data-title="BMW Z1"
+        data-year="1989"
+        data-owner="Michael Smith"
+        data-mileage="10,000 km"
+        data-engine="2.5L Inline-6"
+        data-transmission="5-Speed Manual"
+        data-color="Red"
+        data-features="Retractable doors, Leather interior, Classic design">
+        View Details
+      </button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="images/BMW/BMW Z8.jpg" class="card-img-top" alt="Porsche 911">
+    <div class="card-body">
+      <h5 class="card-title">BMW Z8 - $130,000</h5>
+      <p class="card-text">The BMW Z8 is a classic roadster with a 4.9L V8, sleek design, luxury interior, and powerful performance.</p>
+      <button class="btn btn-primary view-details-btn" 
+        data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+        data-title="BMW Z8"
+        data-year="2003"
+        data-owner="James Anderson"
+        data-mileage="25,000 km"
+        data-engine="4.9L V8"
+        data-transmission="6-Speed Manual"
+        data-color="White"
+        data-features="Aluminum Body, Sport Suspension, Leather Interior, Advanced Sound System">
+        View Details
+      </button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="images/BMW/BMW i7 limousine.jpg" class="card-img-top" alt="Porsche 911">
+    <div class="card-body">
+      <h5 class="card-title">BMW i7 Limousine - $120,000</h5>
+      <p class="card-text">The BMW Z8 is a limited-production roadster with a 4.9L V8 engine, sleek design, and luxurious interior features..</p>
+      <button class="btn btn-primary view-details-btn" 
+        data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+        data-title="BMW i7 Limousine"
+        data-year="2023"
+        data-owner="Laura Williams"
+        data-mileage="3,500 km"
+        data-engine="Electric Motor (Dual Motor All-Wheel Drive)"
+        data-transmission="Single-Speed Automatic"
+        data-color="Sapphire Black"
+        data-features="Luxury Interior, Panoramic Sunroof, Gesture Control, Advanced Driver Assistance Systems, Bowers & Wilkins Sound System">
+        View Details
+      </button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="images/BMW/BMW m3 classic.jpg" class="card-img-top" alt="Porsche 911">
+    <div class="card-body">
+      <h5 class="card-title"> BMW M3 Classic (E30) - $60,000</h5>
+      <p class="card-text">The BMW M3 Classic (E30) is a legendary performance car known for its agile handling, powerful engine, and iconic design.</p>
+      <button class="btn btn-primary view-details-btn" 
+        data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+        data-title="BMW M3 Classic (E30)"
+        data-year="1988"
+        data-owner="Alex Turner"
+        data-mileage="50,000 km"
+        data-engine="2.3L Inline-4"
+        data-transmission="5-Speed Manual"
+        data-color="Red"
+        data-features="port Suspension, Iconic Boxy Design, Recaro Seats, Limited Edition">
+        View Details
+      </button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="images/BMW/BMW M3 2004.jpg" class="card-img-top" alt="Porsche 911">
+    <div class="card-body">
+      <h5 class="card-title">BMW M3 (2004) - $25,000</h5>
+      <p class="card-text">The BMW M3 (2004) is a high-performance sports car with a powerful inline-6 engine, precise handling, and iconic styling.</p>
+      <button class="btn btn-primary view-details-btn" 
+        data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+        data-title="BMW M3 (2004)"
+        data-year="2004"
+        data-owner="Ryan Johnson"
+        data-mileage="80,000 km"
+        data-engine="3.2L Inline-6 (S54)"
+        data-transmission="6-Speed Manual"
+        data-color="Crystal White"
+        data-features="Sports Seats, M Aerodynamics Package, Xenon Headlights, Upgraded Audio System">
+        View Details
+      </button>
+    </div>
+  </div>
+  <div class="card">
+    <img src="images/BMW/BMW x3.jpg" class="card-img-top" alt="Porsche 911">
+    <div class="card-body">
+      <h5 class="card-title"> BMW X3 (2022) - $50,000</h5>
+      <p class="card-text">The BMW X3 (2022) offers a perfect balance of luxury and practicality with a turbocharged engine, spacious interior, and all-wheel drive.</p>
+      <button class="btn btn-primary view-details-btn" 
+        data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+        data-title="Porsche 911"
+        data-year="2022"
+        data-owner="Sarah Williams"
+        data-mileage="15,000 km"
+        data-engine="2.0L Turbocharged Inline-4"
+        data-transmission="8-Speed  Automatic"
+        data-color="Mineral White"
+        data-features="xDrive All-Wheel Drive, Panoramic Sunroof, Premium Interior, Advanced Driver Assistance Features">
+        View Details
+      </button>
+    </div>
+  </div>
+  
+
+  <div class="card">
+    <img src="images/BMW/BMW m1.jpg" class="card-img-top" alt="BMW M5">
+    <div class="card-body">
+      <h5 class="card-title">BMW M1 - $150,000</h5>
+      <p class="card-text">The BMW M1 (1981) is a rare, mid-engine sports car with a 3.5L inline-6, offering exceptional performance and timeless design.nce.</p>
+      <button class="btn btn-primary view-details-btn" 
+        data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+        data-title="BMW M1"
+        data-year="1981"
+        data-owner="David Foster"
+        data-mileage="30,000 km"
+        data-engine="3.5L Inline-6 (M88)"
+        data-transmission="5-Speed Manual"
+        data-color="Red"
+        data-features="Mid-Engine Layout, Iconic Design, Motorsport Heritage, Leather Interior">
+        View Details
+      </button>
+    </div>
+  </div>
+</div>
+  
 
   <br>
 

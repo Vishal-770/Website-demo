@@ -31,11 +31,16 @@
     @media (max-width: 767px) {
       body {
         background-image: url('images/audipagebg.jpeg');
+
         background-size: cover;
         background-position: center center;
         background-attachment: fixed; /* Fixed background */
         background-repeat: no-repeat;
       }
+      #brandname{
+        transform:translateX(-5vw);
+      }
+
     }
 
     .navbar {
@@ -122,6 +127,44 @@
     #brandname:hover{
       color:rgb(175, 170, 170);
     }
+    .card{
+      background-color: #0000007d;
+      color: white;
+    }
+    .btn{
+      background-color: #639e57;
+      border-color: #639e57;
+    }
+    .btn:hover{
+      background-color: #6cbc5c;
+      border-color: #639e57;
+    }
+    .card {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 992px)and (min-width: 578px){
+      .navbar .d-flex {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .navbar .btn-primary {
+        width: 100%;
+      }
+      #brandname{
+        transform:translateX(-9vw);
+      }
+    }
+    .modal-content {
+      color: white;
+      background-color: #0000008f;
+    }
+
   </style>
 </head>
 <body>
@@ -141,7 +184,7 @@
             <a id="Home" class="nav-link active" aria-current="page" href="index.html" >Home</a>
           </li>
           <li class="nav-item">
-            <a id="About" class="nav-link" href="#">About</a>
+            <a id="About" class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item dropdown">
             <a id="Brands" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -212,169 +255,168 @@
   </div>
 
   <br>
-
-  <!-- Card Container -->
- <!-- Card Container -->
- <div class="bmw">
-  <!-- Car Card Example -->
-  <div class="card">
-    <img src="images/Audi/Audi A5.jpg" class="card-img-top" alt="Porsche 911">
-    <div class="card-body">
-      <h5 class="card-title">Audi A5 (2022) - $50,000</h5>
-      <p class="card-text">The Audi A5 (2022) blends sporty performance with luxury, featuring a turbocharged engine, advanced tech, and a sleek design.</p>
-      <button class="btn btn-primary view-details-btn" 
-        data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-        data-title="Audi A5 (2022)"
-        data-year="2022"
-        data-owner="Olivia Green"
-        data-mileage="10,000 km"
-        data-engine="2.0L Turbocharged Inline-4"
-        data-transmission="7-Speed S-Tronic Automatic"
-        data-color="Mythos Black
-        "
-        data-features="Quattro All-Wheel Drive, Virtual Cockpit, MMI Touch System, Premium Leather Interior">
-        View Details
-      </button>
+  <div class="bmw">
+  
+    <div class="card">
+      <img src="images/Audi/Audi A5.jpg" class="card-img-top" alt="Porsche 911">
+      <div class="card-body">
+        <h5 class="card-title">Audi A5 (2022) - $50,000</h5>
+        <p class="card-text">The Audi A5 (2022) blends sporty performance with luxury, featuring a turbocharged engine, advanced tech, and a sleek design.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Audi A5 (2022)"
+          data-year="2022"
+          data-owner="Olivia Green"
+          data-mileage="10,000 km"
+          data-engine="2.0L Turbocharged Inline-4"
+          data-transmission="7-Speed S-Tronic Automatic"
+          data-color="Mythos Black
+          "
+          data-features="Quattro All-Wheel Drive, Virtual Cockpit, MMI Touch System, Premium Leather Interior">
+          View Details
+        </button>
+      </div>
     </div>
-  </div>
-  <div class="card">
-    <img src="images/Audi/Audi Q3.jpg" class="card-img-top" alt="Porsche 911">
-    <div class="card-body">
-      <h5 class="card-title">Audi Q3 (2022)-$42,000
-      </h5>
-      <p class="card-text">The Audi Q3 (2022) offers a compact luxury SUV experience with sporty performance, advanced technology, and a refined interior.</p>
-      <button class="btn btn-primary view-details-btn" 
-        data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-        data-title="Audi Q3"
-        data-year="2022"
-        data-owner="Jessica White"
-        data-mileage="12,000 km"
-        data-engine="2.0L Turbocharged Inline-4"
-        data-transmission="7-Speed S-Tronic Automatic"
-        data-color="Orange"
-        data-features="Quattro All-Wheel Drive, Virtual Cockpit, Panoramic Sunroof, Adaptive Cruise Control">
-        View Details
-      </button>
+    <div class="card">
+      <img src="images/Audi/Audi Q3.jpg" class="card-img-top" alt="Porsche 911">
+      <div class="card-body">
+        <h5 class="card-title">Audi Q3 (2022)-$42,000
+        </h5>
+        <p class="card-text">The Audi Q3 (2022) offers a compact luxury SUV experience with sporty performance, advanced technology, and a refined interior.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Audi Q3"
+          data-year="2022"
+          data-owner="Jessica White"
+          data-mileage="12,000 km"
+          data-engine="2.0L Turbocharged Inline-4"
+          data-transmission="7-Speed S-Tronic Automatic"
+          data-color="Orange"
+          data-features="Quattro All-Wheel Drive, Virtual Cockpit, Panoramic Sunroof, Adaptive Cruise Control">
+          View Details
+        </button>
+      </div>
     </div>
-  </div>
-  <div class="card">
-    <img src="images/Audi/Audi Q5 SUV.jpg" class="card-img-top" alt="Porsche 911">
-    <div class="card-body">
-      <h5 class="card-title">Audi Q5 SUV (2023) - $55,000</h5>
-      <p class="card-text">The Audi Q5 (2023) is a luxury SUV with a turbocharged engine, advanced technology, and a spacious, high-end interior for premium comfort..</p>
-      <button class="btn btn-primary view-details-btn" 
-        data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-        data-title="Audi Q5 SUV (2023)  "
-        data-year="2023"
-        data-owner="Daniel Carter "
-        data-mileage="8,000 km"
-        data-engine="2.0L Turbocharged Inline-4 "
-        data-transmission="7-Speed S-Tronic Automatic "
-        data-color="White"
-        data-features="Quattro All-Wheel Drive, Virtual Cockpit, Panoramic Sunroof, Adaptive Suspension, Bang & Olufsen Sound System r">
-        View Details
-      </button>
+    <div class="card">
+      <img src="images/Audi/Audi Q5 SUV.jpg" class="card-img-top" alt="Porsche 911">
+      <div class="card-body">
+        <h5 class="card-title">Audi Q5 SUV (2023) - $55,000</h5>
+        <p class="card-text">The Audi Q5 (2023) is a luxury SUV with a turbocharged engine, advanced technology, and a spacious, high-end interior for premium comfort..</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Audi Q5 SUV (2023)  "
+          data-year="2023"
+          data-owner="Daniel Carter "
+          data-mileage="8,000 km"
+          data-engine="2.0L Turbocharged Inline-4 "
+          data-transmission="7-Speed S-Tronic Automatic "
+          data-color="White"
+          data-features="Quattro All-Wheel Drive, Virtual Cockpit, Panoramic Sunroof, Adaptive Suspension, Bang & Olufsen Sound System r">
+          View Details
+        </button>
+      </div>
     </div>
-  </div>
-  <div class="card">
-    <img src="images/Audi/Audi Q8.jpg" class="card-img-top" alt="Porsche 911">
-    <div class="card-body">
-      <h5 class="card-title">Audi Q8 (2023)-$75,000 </h5>
-      <p class="card-text">The Audi Q8 (2023) is a premium luxury SUV with a powerful V6 engine, cutting-edge technology, and a bold, sporty design.</p>
-      <button class="btn btn-primary view-details-btn" 
-        data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-        data-title="Audi Q8 (2023)"
-        data-year="2023"
-        data-owner="Mark Robinson  "
-        data-mileage="6,000 km"
-        data-engine="3.0L Turbocharged V6 "
-        data-transmission="8-Speed Tiptronic Automatic  
-        "
-        data-color="Daytona Gray"
-        data-features="Quattro All-Wheel Drive, Virtual Cockpit, Panoramic Sunroof, Matrix LED Headlights, Bang & Olufsen 3D Sound System  ">
-        View Details
-      </button>
+    <div class="card">
+      <img src="images/Audi/Audi Q8.jpg" class="card-img-top" alt="Porsche 911">
+      <div class="card-body">
+        <h5 class="card-title">Audi Q8 (2023)-$75,000 </h5>
+        <p class="card-text">The Audi Q8 (2023) is a premium luxury SUV with a powerful V6 engine, cutting-edge technology, and a bold, sporty design.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Audi Q8 (2023)"
+          data-year="2023"
+          data-owner="Mark Robinson  "
+          data-mileage="6,000 km"
+          data-engine="3.0L Turbocharged V6 "
+          data-transmission="8-Speed Tiptronic Automatic  
+          "
+          data-color="Daytona Gray"
+          data-features="Quattro All-Wheel Drive, Virtual Cockpit, Panoramic Sunroof, Matrix LED Headlights, Bang & Olufsen 3D Sound System  ">
+          View Details
+        </button>
+      </div>
     </div>
-  </div>
-  <div class="card">
-    <img src="images/Audi/Audi R8 LMS GT.jpg" class="card-img-top" alt="Porsche 911">
-    <div class="card-body">
-      <h5 class="card-title"> Audi R8 LMS GT (2023) - $450,000</h5>
-      <p class="card-text">The Audi R8 LMS GT (2023) is a high-performance race car built for track domination, featuring a V10 engine, advanced aerodynamics, and racing-grade technology.</p>
-      <button class="btn btn-primary view-details-btn" 
-        data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-        data-title=" Audi R8 LMS GT (2023)"
-        data-year="2023"
-        data-owner="Track Racing Team "
-        data-mileage="2,000 km"
-        data-engine="5.2L Naturally Aspirated V10"
-        data-transmission=" 6-Speed Sequential Racing Gearbox  "
-        data-color="Nardo White with Racing Livery  "
-        data-features="Lightweight Carbon Fiber Body, Aerodynamic Package, Roll Cage, Racing Suspension, FIA-Approved Safety Features ">
-        View Details
-      </button>
+    <div class="card">
+      <img src="images/Audi/Audi R8 LMS GT.jpg" class="card-img-top" alt="Porsche 911">
+      <div class="card-body">
+        <h5 class="card-title"> Audi R8 LMS GT (2023) - $450,000</h5>
+        <p class="card-text">The Audi R8 LMS GT (2023) is a high-performance race car built for track domination, featuring a V10 engine, advanced aerodynamics, and racing-grade technology.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title=" Audi R8 LMS GT (2023)"
+          data-year="2023"
+          data-owner="Track Racing Team "
+          data-mileage="2,000 km"
+          data-engine="5.2L Naturally Aspirated V10"
+          data-transmission=" 6-Speed Sequential Racing Gearbox  "
+          data-color="Nardo White with Racing Livery  "
+          data-features="Lightweight Carbon Fiber Body, Aerodynamic Package, Roll Cage, Racing Suspension, FIA-Approved Safety Features ">
+          View Details
+        </button>
+      </div>
     </div>
-  </div>
-  <div class="card">
-    <img src="images/Audi/audi R8.jpg" class="card-img-top" alt="Porsche 911">
-    <div class="card-body">
-      <h5 class="card-title"> Audi R8 (2023) - $160,000 </h5>
-      <p class="card-text">The Audi R8 (2023) is a stunning supercar with a high-revving V10, precision handling, and a luxurious yet sporty design.</p>
-      <button class="btn btn-primary view-details-btn" 
-        data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-        data-title="Audi R8"
-        data-year="2023"
-        data-owner="Jason Miller  "
-        data-mileage="5,000 km"
-        data-engine=" 5.2L Naturally Aspirated V10  "
-        data-transmission="7-Speed S-Tronic Automatic "
-        data-color="White"
-        data-features="Quattro All-Wheel Drive, Virtual Cockpit, Carbon Fiber Interior, Sports Exhaust, Bang & Olufsen Sound System  ">
-        View Details
-      </button>
+    <div class="card">
+      <img src="images/Audi/audi R8.jpg" class="card-img-top" alt="Porsche 911">
+      <div class="card-body">
+        <h5 class="card-title"> Audi R8 (2023) - $160,000 </h5>
+        <p class="card-text">The Audi R8 (2023) is a stunning supercar with a high-revving V10, precision handling, and a luxurious yet sporty design.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Audi R8"
+          data-year="2023"
+          data-owner="Jason Miller  "
+          data-mileage="5,000 km"
+          data-engine=" 5.2L Naturally Aspirated V10  "
+          data-transmission="7-Speed S-Tronic Automatic "
+          data-color="White"
+          data-features="Quattro All-Wheel Drive, Virtual Cockpit, Carbon Fiber Interior, Sports Exhaust, Bang & Olufsen Sound System  ">
+          View Details
+        </button>
+      </div>
     </div>
-  </div>
-  <div class="card">
-    <img src="images/Audi/Audi RS5.jpg" class="card-img-top" alt="Porsche 911">
-    <div class="card-body">
-      <h5 class="card-title"> Audi RS5 (2023)- $85,000 </h5>
-      <p class="card-text">The Audi RS5 (2023) is a high-performance sports coupe with a twin-turbo V6, aggressive styling, and advanced all-wheel-drive handling.</p>
-      <button class="btn btn-primary view-details-btn" 
-        data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-        data-title="Audi RS5 (2023)"
-        data-year="2023"
-        data-owner="Daniel Cooper"
-        data-mileage="7,000 km"
-        data-engine=" 2.9L Twin-Turbocharged V6  "
-        data-transmission="8-Speed Tiptronic Automatic "
-        data-color="Red"
-        data-features="The Audi RS5 (2023) is a high-performance sports coupe with a twin-turbo V6, aggressive styling, and advanced all-wheel-drive handling.">
-        View Details
-      </button>
+    <div class="card">
+      <img src="images/Audi/Audi RS5.jpg" class="card-img-top" alt="Porsche 911">
+      <div class="card-body">
+        <h5 class="card-title"> Audi RS5 (2023)- $85,000 </h5>
+        <p class="card-text">The Audi RS5 (2023) is a high-performance sports coupe with a twin-turbo V6, aggressive styling, and advanced all-wheel-drive handling.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title="Audi RS5 (2023)"
+          data-year="2023"
+          data-owner="Daniel Cooper"
+          data-mileage="7,000 km"
+          data-engine=" 2.9L Twin-Turbocharged V6  "
+          data-transmission="8-Speed Tiptronic Automatic "
+          data-color="Red"
+          data-features="The Audi RS5 (2023) is a high-performance sports coupe with a twin-turbo V6, aggressive styling, and advanced all-wheel-drive handling.">
+          View Details
+        </button>
+      </div>
+    </div>
+    
+  
+    <div class="card">
+      <img src="images/Audi/Audi S3 Limousin.jpg" class="card-img-top" alt="BMW M5">
+      <div class="card-body">
+        <h5 class="card-title"> Audi S3 Limousine (2023) - $55,000</h5>
+        <p class="card-text">The Audi S3 Limousine (2023) is a sporty and luxurious sedan with a turbocharged engine, sharp handling, and premium interior features.</p>
+        <button class="btn btn-primary view-details-btn" 
+          data-bs-toggle="modal" data-bs-target="#carDetailsModal"
+          data-title=" Audi S3 Limousine (2023):"
+          data-year="2023"
+          data-owner="Jane Smith"
+          data-mileage="9,000 km"
+          data-engine="2.0L Turbocharged Inline-4 "
+          data-transmission="2.0L Turbocharged Inline-4 "
+          data-color="Glacier White "
+          data-features="Quattro All-Wheel Drive, Virtual Cockpit, Sport Suspension, Leather Sport Seats, Matrix LED Headlights  ">
+          View Details
+        </button>
+      </div>
     </div>
   </div>
   
 
-  <div class="card">
-    <img src="images/Audi/Audi S3 Limousin.jpg" class="card-img-top" alt="BMW M5">
-    <div class="card-body">
-      <h5 class="card-title"> Audi S3 Limousine (2023) - $55,000</h5>
-      <p class="card-text">The Audi S3 Limousine (2023) is a sporty and luxurious sedan with a turbocharged engine, sharp handling, and premium interior features.</p>
-      <button class="btn btn-primary view-details-btn" 
-        data-bs-toggle="modal" data-bs-target="#carDetailsModal"
-        data-title=" Audi S3 Limousine (2023):"
-        data-year="2023"
-        data-owner="Jane Smith"
-        data-mileage="9,000 km"
-        data-engine="2.0L Turbocharged Inline-4 "
-        data-transmission="2.0L Turbocharged Inline-4 "
-        data-color="Glacier White "
-        data-features="Quattro All-Wheel Drive, Virtual Cockpit, Sport Suspension, Leather Sport Seats, Matrix LED Headlights  ">
-        View Details
-      </button>
-    </div>
-  </div>
-</div>
   <br>
 
   <!-- Car Details Modal -->
