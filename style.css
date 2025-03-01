@@ -12,6 +12,7 @@ font-style: normal;
 #main{
     background-image: url(images/newbackgroundimage1.jpeg);
     background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 
@@ -83,6 +84,7 @@ font-style: normal;
   }
   #Wallstreet{
     transform:translateX(-8vw);
+    margin-right: 7vw;
   }
 }
 
