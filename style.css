@@ -206,10 +206,10 @@ font-style: normal;
   .navbar-brand {
     font-size: 1.2rem;
   }
-  /* #Wallstreet{
-    transform:translateX(-2vw);
+  #Wallstreet{
+    transform:translateX(-5vw);
     
-  } */
+  }
 }
 
 
