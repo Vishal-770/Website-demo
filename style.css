@@ -207,8 +207,9 @@ font-style: normal;
     font-size: 1.2rem;
   }
   #Wallstreet{
-    transform:translateX(3vw);
-    
+    /* transform:translateX(2vw); */
+    /* background-color: #2e7d32; */
+    margin-right:-5.957vw ;
   }
 }
 

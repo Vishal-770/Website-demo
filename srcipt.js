@@ -14,21 +14,46 @@ var tl=gsap.timeline()
         duration:1.5,
         scale:0.2,
       })
-      gsap.to(".image-scroll-content1", {
-        x: "-45%", // Moves to the left
-        duration: 15,
-        repeat: -1,
-        yoyo: true,
-        ease: "none"
-    });
-    
-    gsap.to(".image-scroll-content2", {
-        x: "-22%", // Moves to the right (opposite direction)
-        duration: 7,
-        repeat: -1,
-        yoyo: true,
-        ease: "none"
-    });
+      const mm = gsap.matchMedia();
+
+      mm.add("(max-width: 768px)", () => {
+        // Adjust animation for smaller screens
+        gsap.to(".image-scroll-content1", {
+          x: "-85%", // Move more to the left to show fewer icons at a time
+          duration: 21,
+          repeat: -1,
+          yoyo: true,
+          ease: "none"
+        });
+      
+        gsap.to(".image-scroll-content2", {
+          x: "-80%", // Move more to the right
+          duration: 21,
+          repeat: -1,
+          yoyo: true,
+          ease: "none"
+        });
+      });
+      
+      mm.add("(min-width: 769px)", () => {
+        // Original animation for larger screens
+        gsap.to(".image-scroll-content1", {
+          x: "-45%", // Moves to the left
+          duration: 15,
+          repeat: -1,
+          yoyo: true,
+          ease: "none"
+        });
+      
+        gsap.to(".image-scroll-content2", {
+          x: "-22%", // Moves to the right
+          duration: 7,
+          repeat: -1,
+          yoyo: true,
+          ease: "none"
+        });
+      });
+      
     
     
 
