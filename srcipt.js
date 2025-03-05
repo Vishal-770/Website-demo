@@ -14,45 +14,66 @@ var tl=gsap.timeline()
         duration:1.5,
         scale:0.2,
       })
-      const mm = gsap.matchMedia();
+      // Create separate GSAP animations for each scroll section
+const scrollAnimation1 = gsap.to(".image-scroll-content1", {
+  x: "-45%", // Moves to the left
+  duration: 15,
+  repeat: -1,
+  yoyo: true,
+  ease: "none"
+});
 
-      mm.add("(max-width: 768px)", () => {
-        // Adjust animation for smaller screens
-        gsap.to(".image-scroll-content1", {
-          x: "-85%", // Move more to the left to show fewer icons at a time
-          duration: 21,
-          repeat: -1,
-          yoyo: true,
-          ease: "none"
-        });
+const scrollAnimation2 = gsap.to(".image-scroll-content2", {
+  x: "-22%", // Moves to the right
+  duration: 7,
+  repeat: -1,
+  yoyo: true,
+  ease: "none"
+});
+
+// Pause animations on hover for the first scroll section
+document.querySelectorAll(".image-scroll-content1 .image-container").forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    scrollAnimation1.pause(); // Pause only the first scroll section
+  });
+
+  card.addEventListener("mouseleave", () => {
+    scrollAnimation1.resume(); // Resume only the first scroll section
+  });
+});
+
+// Pause animations on hover for the second scroll section
+document.querySelectorAll(".image-scroll-content2 .image-container").forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    scrollAnimation2.pause(); // Pause only the second scroll section
+  });
+
+  card.addEventListener("mouseleave", () => {
+    scrollAnimation2.resume(); // Resume only the second scroll section
+  });
+});
+
+// Responsive adjustments
+const mm = gsap.matchMedia();
+
+mm.add("(max-width: 768px)", () => {
+  // Adjust animation for smaller screens
+  scrollAnimation1.vars.x = "-85%";
+  scrollAnimation1.vars.duration = 21;
+
+  scrollAnimation2.vars.x = "-80%";
+  scrollAnimation2.vars.duration = 21;
+});
+
+mm.add("(min-width: 769px)", () => {
+  // Original animation for larger screens
+  scrollAnimation1.vars.x = "-45%";
+  scrollAnimation1.vars.duration = 15;
+
+  scrollAnimation2.vars.x = "-22%";
+  scrollAnimation2.vars.duration = 7;
+});
       
-        gsap.to(".image-scroll-content2", {
-          x: "-80%", // Move more to the right
-          duration: 21,
-          repeat: -1,
-          yoyo: true,
-          ease: "none"
-        });
-      });
-      
-      mm.add("(min-width: 769px)", () => {
-        // Original animation for larger screens
-        gsap.to(".image-scroll-content1", {
-          x: "-45%", // Moves to the left
-          duration: 15,
-          repeat: -1,
-          yoyo: true,
-          ease: "none"
-        });
-      
-        gsap.to(".image-scroll-content2", {
-          x: "-22%", // Moves to the right
-          duration: 7,
-          repeat: -1,
-          yoyo: true,
-          ease: "none"
-        });
-      });
       
     
     

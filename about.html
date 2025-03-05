@@ -16,6 +16,7 @@
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
+      color: white;
     }
 
     /* Background Image for Desktop */
@@ -166,28 +167,72 @@
       background-color: #0000008f;
     }
     .about-section {
-      background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-      color: white;
-      padding: 40px;
-      border-radius: 10px;
-      margin: 20px auto;
-      max-width: 800px;
-    }
-    .about-section h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    .about-section p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      margin-bottom: 20px;
-    }
-    .about-section img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #00000098;
+            max-width: 1200px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+         
+        }
+
+        .about-section h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            max-width: 900px;
+        }
+
+        .about-content p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #ffffff;
+            text-align: justify;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            margin-top: 30px;
+            padding: 15px;
+            background: #000;
+            color: white;
+            border-radius: 8px;
+            width: fit-content;
+        }
+
+        .contact-info a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            .about-section {
+                padding: 30px 15px;
+            }
+
+            .about-content p {
+                font-size: 0.95rem;
+            }
+        }
   </style>
 </head>
 <body>
@@ -280,20 +325,56 @@
   <br>
  <!-- About Us Section -->
  <div class="about-section">
-    <h1>About Us</h1>
-    <p>
-      Welcome to <strong>Wall Street Wheels</strong>, where luxury meets affordability. Our modern and professional car dealership showroom features sleek, polished floors reflecting bright overhead lights, creating an atmosphere of elegance and trust. Our friendly sales representatives, dressed in professional attire, are here to guide you through every step of your car-buying journey.
-    </p>
-    <p>
-      At Wall Street Wheels, we pride ourselves on delivering exceptional customer service. Whether you're looking for a stylish sedan, a spacious SUV, or a high-performance sports car, our showroom showcases a wide range of high-quality vehicles to suit every need and budget. Our banners proudly display our core values: <strong>Quality</strong>, <strong>Affordability</strong>, and <strong>Trusted Service</strong>.
-    </p>
-    <p>
-      Large glass windows allow natural daylight to highlight the cleanliness and professionalism of our showroom, creating a welcoming environment for our customers. We are committed to building long-lasting relationships with our clients, ensuring that every visit to Wall Street Wheels is a memorable one.
-    </p>
-    <p>
-      Thank you for choosing Wall Street Wheels. We look forward to helping you find the perfect vehicle that matches your lifestyle and dreams.
-    </p>
+  <h1>About Us</h1>
+  <div class="about-content">
+      <p>
+          Welcome to <strong>Wall Street Wheels</strong>, your premier destination for luxury supercars and exotic vehicles in Chennai. Our passion for high-performance vehicles and commitment to customer satisfaction set us apart as a leading car dealership.
+      </p>
+      <p>
+          We specialize in offering a diverse range of new and pre-owned luxury cars, including brands like **BMW, Audi, Mercedes-Benz, Porsche, and Bugatti**. Whether you're an automobile enthusiast looking for your dream car or simply in search of a stylish, high-quality vehicle at a competitive price, we are here to serve you.
+      </p>
+      <p>
+          Our showroom is designed to provide a seamless and luxurious car-buying experience. With sleek, polished floors, bright overhead lighting, and an inviting atmosphere, we ensure that every customer feels valued. Our professional sales team, dressed in formal attire, is always available to guide you through the process, offering expert advice tailored to your preferences.
+      </p>
+      <p>
+          At **Wall Street Wheels**, we believe in making luxury affordable. Our wide collection features **sports cars, sedans, SUVs, and premium vehicles** that fit every budget. Whether you’re looking for a brand-new supercar or a pre-owned luxury vehicle that has been meticulously maintained, we offer the best options in Chennai.
+      </p>
+      <p>
+          Transparency and trust are at the core of our business. Every vehicle in our showroom undergoes a rigorous **quality check**, ensuring that our customers drive away with nothing but the best. We also provide detailed **vehicle history reports**, so you can make an informed decision with complete confidence.
+      </p>
+      <h2>Why Choose Us?</h2>
+      <p>
+          ✅ **Wide Selection:** From high-performance supercars to everyday luxury vehicles, we have something for everyone.  
+          ✅ **Competitive Pricing:** Get the best deals on both brand-new and used cars.  
+          ✅ **Financing Options:** We provide **easy EMI plans and car loan assistance** to make your purchase hassle-free.  
+          ✅ **Certified Vehicles:** Every car is **thoroughly inspected** and **verified** before reaching our showroom.  
+          ✅ **Unmatched Customer Service:** Our experienced team is here to assist you at every step, from selection to final purchase.  
+      </p>
+      <h2>Luxury Supercars Under 50 Lakhs</h2>
+      <p>
+          If you're looking for **supercars under ₹50 lakhs**, we have an exciting range of options for you. From powerful BMW M-series to Audi RS models, our selection ensures that you experience the thrill of driving a high-performance vehicle without stretching your budget.
+      </p>
+      <h2>Affordable Luxury Cars Under 10 Lakhs</h2>
+      <p>
+          We understand that luxury should be accessible to all. Our collection of **affordable luxury cars under ₹10 lakhs** includes stylish sedans and SUVs from premium brands like **Mercedes, Audi, and BMW**. These pre-owned vehicles are maintained in top condition and available at unbeatable prices.
+      </p>
+      <h2>Test Drive & Booking</h2>
+      <p>
+          Nothing compares to the feeling of sitting behind the wheel of your dream car. At **Wall Street Wheels**, we offer test drives so you can experience the **power, luxury, and comfort** before making your final decision. Visit our showroom in **Vandalur, Chennai**, or contact us to schedule an appointment today.
+      </p>
+      <h2>Follow Us on Social Media</h2>
+      <p>
+          Stay updated with our latest arrivals, exclusive offers, and automotive news by following us on **Instagram & Twitter (X)**. We also share exciting videos of our luxury cars to help you make the perfect choice.
+      </p>
   </div>
+  
+  <div class="contact-info">
+      📍 **Location:** Vandalur, Chennai – **Pincode:** 600048 <br>
+      📧 **Email:** <a href="mailto:wall.street.wheels07@gmail.com">wall.street.wheels07@gmail.com</a> <br>
+      📸 **Instagram:** <a href="https://www.instagram.com/wall_street_wheels/" target="_blank">@wall_street_wheels</a> <br>
+      🐦 **Twitter (X):** <a href="https://x.com/street_wal87754" target="_blank">@street_wal87754</a>
+  </div>
+</div>
   
 
   <br>
