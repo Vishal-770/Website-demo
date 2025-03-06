@@ -180,6 +180,38 @@
   }
 }
 
+.text-center h1 {
+  color: #f0f0f0; /* Slightly darker white */
+  font-size: 2.5rem; /* Default size for larger screens */
+  font-weight: bold; /* Bold text */
+  margin-bottom: 0.5rem; /* Space below the heading */
+}
+
+.text-center p {
+  color: #d0d0d0; /* Slightly darker light gray */
+  font-size: 1.2rem; /* Default size for larger screens */
+  margin-bottom: 2rem; /* Space below the subheading */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .text-center h1 {
+    font-size: 2rem; /* Medium size for tablets */
+  }
+  .text-center p {
+    font-size: 1rem; /* Medium size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .text-center h1 {
+    font-size: 1.5rem; /* Smaller size for mobile */
+  }
+  .text-center p {
+    font-size: 0.9rem; /* Smaller size for mobile */
+  }
+}
+
   </style>
 </head>
 <body>
@@ -268,7 +300,10 @@
       </div>
     </div>
   </div>
-
+  <div class="text-center my-4">
+    <h1 style="color: #ffffff; font-size: 2.5rem;">Explore Audi's Luxury Lineup</h1>
+    <p style="color: #e0e0e0; font-size: 1.2rem;">Discover the perfect blend of performance, innovation, and elegance.</p>
+  </div>
   <br>
   <div class="bmw">
   

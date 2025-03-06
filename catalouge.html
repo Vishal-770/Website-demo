@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catalog - Wall Street Wheels</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
 
   <link rel="canonical" href="https://wallstreetwheels.store/catalogue.html" />
 
@@ -22,7 +22,7 @@
       height: 100vh;
       display: flex;
       flex-direction: column;
-      background-image: url(images/catalogebg1.jpeg); /* Default background image */
+      background-image: url(images/catalogebg1.jpeg); 
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -32,7 +32,7 @@
     /* Different background images for different devices */
     @media (max-width: 480px) {
       body {
-        background-image: url(images/catalogebg2.jpeg); /* Background for small devices */
+        background-image: url(images/catalogbg.jpeg); /* Background for small devices */
       }
     }
 
@@ -211,9 +211,7 @@
       .navbar .btn-primary {
         width: 100%;
       }
-      #Wallstreet{
-        transform:translateX(-8vw);
-      }
+     
     }
     .brand-card{
       background-color: #00000052;
@@ -223,7 +221,39 @@
       background-color: #0000002e;
       color: white;
     }
-   
+   /* Add this for the heading responsiveness */
+.text-center h1 {
+  font-size: 2.5rem; /* Default size for larger screens */
+}
+
+@media (max-width: 768px) {
+  .text-center h1 {
+    font-size: 2rem; /* Medium size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .text-center h1 {
+    font-size: 1.5rem; /* Smaller size for mobile */
+  }
+}
+
+/* Adjust card size for mobile */
+@media (max-width: 480px) {
+  .brand-card {
+    width: 80%; /* Make cards wider on mobile */
+    height: 200px; /* Reduce height for mobile */
+    padding: 15px; /* Reduce padding */
+  }
+
+  .brand-card img {
+    max-height: 100px; /* Reduce logo size */
+  }
+
+  .brand-card h3 {
+    font-size: 1.2rem; /* Reduce font size */
+  }
+}
   </style>
 </head>
 <body>
@@ -312,70 +342,59 @@
   </div>
 
   <!-- Brand Cards -->
-  <div class="brand-container">
-    <!-- BMW -->
-    <div class="brand-card">
-      <a href="bmw.html">
-        <img src="images/logos/bmwlogo_cropped.webp" alt="BMW Logo">
-        <h3 style="color: #ffffff" >BMW</h3>
-      </a>
-    </div>
+ <!-- Add this heading above the brand-container -->
+<div class="text-center my-4">
+  <h1 style="color: #ffffff; font-size: 2.5rem;">Brands We Offer</h1>
+</div>
 
-    <!-- Audi -->
-    <div class="brand-card">
-      <a href="audi.html">
-        <img src="images/logos/audilogo_cropped.webp" alt="Audi Logo">
-        <h3 style="color: #ffffff">Audi</h3>
-      </a>
-    </div>
-
-    <!-- Mercedes -->
-    <div class="brand-card">
-      <a href="mercedes.html">
-        <img src="images/logos/Mercedes-Benz-Logo_cropped.webp" alt="Mercedes Logo">
-        <h3 style="color: #ffffff">Mercedes</h3>
-      </a>
-    </div>
-
-    <!-- Bugatti -->
-    <div class="brand-card">
-      <a href="bugatti.html">
-        <img src="images/logos/Bugattilogo_cropped.webp" alt="Bugatti Logo">
-        <h3 style="color: #ffffff">Bugatti</h3>
-      </a>
-    </div>
-
-    <!-- Porsche -->
-    <div class="brand-card">
-      <a href="porsche.html">
-        <img src="images/logos/porschelogo_cropped.webp" alt="Porsche Logo">
-        <h3 style="color: #ffffff" >Porsche</h3>
-      </a>
-    </div>
+<!-- Brand Cards -->
+<div class="brand-container">
+  <!-- BMW -->
+  <div class="brand-card">
+    <a href="bmw.html">
+      <img src="images/logos/bmwlogo_cropped.webp" alt="BMW Logo">
+      <h3 style="color: #ffffff">BMW</h3>
+    </a>
   </div>
+
+  <!-- Audi -->
+  <div class="brand-card">
+    <a href="audi.html">
+      <img src="images/logos/audilogo_cropped.webp" alt="Audi Logo">
+      <h3 style="color: #ffffff">Audi</h3>
+    </a>
+  </div>
+
+  <!-- Mercedes -->
+  <div class="brand-card">
+    <a href="mercedes.html">
+      <img src="images/logos/Mercedes-Benz-Logo_cropped.webp" alt="Mercedes Logo">
+      <h3 style="color: #ffffff">Mercedes</h3>
+    </a>
+  </div>
+
+  <!-- Bugatti -->
+  <div class="brand-card">
+    <a href="bugatti.html">
+      <img src="images/logos/Bugattilogo_cropped.webp" alt="Bugatti Logo">
+      <h3 style="color: #ffffff">Bugatti</h3>
+    </a>
+  </div>
+
+  <!-- Porsche -->
+  <div class="brand-card">
+    <a href="porsche.html">
+      <img src="images/logos/porschelogo_cropped.webp" alt="Porsche Logo">
+      <h3 style="color: #ffffff">Porsche</h3>
+    </a>
+  </div>
+</div>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <!-- Custom JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
-   document.querySelectorAll(".brand-card").forEach(card => {
-    card.addEventListener("mouseenter", () => {
-      gsap.to(card, {
-        y: -20, // Move the card to the right
-        duration: 0.1,
-        ease: "elastic.out(1,0.1)"// Ease-out with a bounce effect
-      });
-    });
-
-    card.addEventListener("mouseleave", () => {
-      gsap.to(card, {
-        y: 0, // Move it back to original position
-        duration: 0.1,
-        ease: "elastic.out(1,0.1)"
-      });
-    });
-  });
 
 
      document.addEventListener("DOMContentLoaded", function () {

@@ -150,3 +150,15 @@ mm.add("(min-width: 769px)", () => {
         }
       });
     });
+    function copyEmail() {
+      // Copy email to clipboard
+      navigator.clipboard.writeText("wall.street.wheels07@gmail.com").then(function() {
+          // Show toast notification
+          var toastEl = document.getElementById('emailToast');
+          var toast = new bootstrap.Toast(toastEl);
+          toast.show();
+      }).catch(function(err) {
+          console.error('Error copying email: ', err);
+      });
+  }
+  
