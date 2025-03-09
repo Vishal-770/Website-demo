@@ -233,6 +233,167 @@
                 font-size: 0.95rem;
             }
         }
+        /* General Styles */
+.about-section {
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 2rem auto;
+  backdrop-filter: blur(5px); /* Blur effect for transparency */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about-heading {
+  font-size: 2.5rem;
+  color: #ffffff; /* White text */
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #e0e0e0; /* Light gray text */
+  margin-bottom: 1.5rem;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(5px); /* Blur effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.why-choose-us h2 {
+  font-size: 2rem;
+  color: #ffffff; /* White text */
+  margin-bottom: 1rem;
+}
+
+.why-choose-us ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.why-choose-us li {
+  font-size: 1rem;
+  color: #e0e0e0; /* Light gray text */
+  margin-bottom: 0.5rem;
+}
+
+/* Supercars and Affordable Luxury Sections */
+.supercars-section,
+.affordable-luxury-section,
+.test-drive-section {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(5px); /* Blur effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.supercars-section h2,
+.affordable-luxury-section h2,
+.test-drive-section h2 {
+  font-size: 2rem;
+  color: #ffffff; /* White text */
+  margin-bottom: 1rem;
+}
+
+/* Social Media Section */
+.social-media-section {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(5px); /* Blur effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.social-media-section h2 {
+  font-size: 2rem;
+  color: #ffffff; /* White text */
+  margin-bottom: 1rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.social-link.instagram { background-color: rgba(228, 64, 95, 0.8); } /* Semi-transparent Instagram pink */
+.social-link.twitter { background-color: rgba(29, 161, 242, 0.8); } /* Semi-transparent Twitter blue */
+.social-link.facebook { background-color: rgba(24, 119, 242, 0.8); } /* Semi-transparent Facebook blue */
+.social-link.youtube { background-color: rgba(255, 0, 0, 0.8); } /* Semi-transparent YouTube red */
+
+.social-link:hover {
+  opacity: 0.9; /* Slight fade on hover */
+}
+
+/* Contact Info Section */
+.contact-info {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  padding: 1.5rem;
+  border-radius: 10px;
+  backdrop-filter: blur(5px); /* Blur effect */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  color: #ffffff; /* White text */
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  color: #e0e0e0; /* Light gray text */
+  margin-bottom: 0.5rem;
+}
+
+.contact-info a {
+  color: #1da1f2; /* Twitter blue for links */
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-heading {
+    font-size: 2rem;
+  }
+
+  .why-choose-us h2,
+  .supercars-section h2,
+  .affordable-luxury-section h2,
+  .test-drive-section h2,
+  .social-media-section h2,
+  .contact-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+}
   </style>
 </head>
 <body>
@@ -242,7 +403,7 @@
     <div class="container-fluid">
       <img id="logo" src="newlogo.jpg" alt="wall Street wheels logo">
       <pre>  </pre>
-      <a id="brandname"  class="navbar-brand" href="index.html">Wall Street Wheels</a>
+      <a id="Wallstreet"  class="navbar-brand" href="index.html">Wall Street Wheels</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -325,54 +486,74 @@
   <br>
  <!-- About Us Section -->
  <div class="about-section">
-  <h1>About Us</h1>
+  <h1 class="about-heading">About Us</h1>
   <div class="about-content">
-      <p>
-          Welcome to <strong>Wall Street Wheels</strong>, your premier destination for luxury supercars and exotic vehicles in Chennai. Our passion for high-performance vehicles and commitment to customer satisfaction set us apart as a leading car dealership.
-      </p>
-      <p>
-          We specialize in offering a diverse range of new and pre-owned luxury cars, including brands like **BMW, Audi, Mercedes-Benz, Porsche, and Bugatti**. Whether you're an automobile enthusiast looking for your dream car or simply in search of a stylish, high-quality vehicle at a competitive price, we are here to serve you.
-      </p>
-      <p>
-          Our showroom is designed to provide a seamless and luxurious car-buying experience. With sleek, polished floors, bright overhead lighting, and an inviting atmosphere, we ensure that every customer feels valued. Our professional sales team, dressed in formal attire, is always available to guide you through the process, offering expert advice tailored to your preferences.
-      </p>
-      <p>
-          At **Wall Street Wheels**, we believe in making luxury affordable. Our wide collection features **sports cars, sedans, SUVs, and premium vehicles** that fit every budget. Whether you’re looking for a brand-new supercar or a pre-owned luxury vehicle that has been meticulously maintained, we offer the best options in Chennai.
-      </p>
-      <p>
-          Transparency and trust are at the core of our business. Every vehicle in our showroom undergoes a rigorous **quality check**, ensuring that our customers drive away with nothing but the best. We also provide detailed **vehicle history reports**, so you can make an informed decision with complete confidence.
-      </p>
+    <p>
+      Welcome to <strong>Wall Street Wheels</strong>, your premier destination for luxury supercars and exotic vehicles in Chennai. Our passion for high-performance vehicles and commitment to customer satisfaction set us apart as a leading car dealership.
+    </p>
+    <p>
+      We specialize in offering a diverse range of new and pre-owned luxury cars, including brands like <strong>BMW, Audi, Mercedes-Benz, Porsche, and Bugatti</strong>. Whether you're an automobile enthusiast looking for your dream car or simply in search of a stylish, high-quality vehicle at a competitive price, we are here to serve you.
+    </p>
+    <p>
+      Our showroom is designed to provide a seamless and luxurious car-buying experience. With sleek, polished floors, bright overhead lighting, and an inviting atmosphere, we ensure that every customer feels valued. Our professional sales team, dressed in formal attire, is always available to guide you through the process, offering expert advice tailored to your preferences.
+    </p>
+    <p>
+      At <strong>Wall Street Wheels</strong>, we believe in making luxury affordable. Our wide collection features <strong>sports cars, sedans, SUVs, and premium vehicles</strong> that fit every budget. Whether you’re looking for a brand-new supercar or a pre-owned luxury vehicle that has been meticulously maintained, we offer the best options in Chennai.
+    </p>
+    <p>
+      Transparency and trust are at the core of our business. Every vehicle in our showroom undergoes a rigorous <strong>quality check</strong>, ensuring that our customers drive away with nothing but the best. We also provide detailed <strong>vehicle history reports</strong>, so you can make an informed decision with complete confidence.
+    </p>
+
+    <div class="why-choose-us">
       <h2>Why Choose Us?</h2>
+      <ul>
+        <li>✅ <strong>Wide Selection:</strong> From high-performance supercars to everyday luxury vehicles, we have something for everyone.</li>
+        <li>✅ <strong>Competitive Pricing:</strong> Get the best deals on both brand-new and used cars.</li>
+        <li>✅ <strong>Financing Options:</strong> We provide <strong>easy EMI plans and car loan assistance</strong> to make your purchase hassle-free.</li>
+        <li>✅ <strong>Certified Vehicles:</strong> Every car is <strong>thoroughly inspected</strong> and <strong>verified</strong> before reaching our showroom.</li>
+        <li>✅ <strong>Unmatched Customer Service:</strong> Our experienced team is here to assist you at every step, from selection to final purchase.</li>
+      </ul>
+    </div>
+
+    <div class="supercars-section">
+      <h2>Luxury Supercars Under ₹50 Lakhs</h2>
       <p>
-          ✅ **Wide Selection:** From high-performance supercars to everyday luxury vehicles, we have something for everyone.  
-          ✅ **Competitive Pricing:** Get the best deals on both brand-new and used cars.  
-          ✅ **Financing Options:** We provide **easy EMI plans and car loan assistance** to make your purchase hassle-free.  
-          ✅ **Certified Vehicles:** Every car is **thoroughly inspected** and **verified** before reaching our showroom.  
-          ✅ **Unmatched Customer Service:** Our experienced team is here to assist you at every step, from selection to final purchase.  
+        If you're looking for <strong>supercars under ₹50 lakhs</strong>, we have an exciting range of options for you. From powerful BMW M-series to Audi RS models, our selection ensures that you experience the thrill of driving a high-performance vehicle without stretching your budget.
       </p>
-      <h2>Luxury Supercars Under 50 Lakhs</h2>
+    </div>
+
+    <div class="affordable-luxury-section">
+      <h2>Affordable Luxury Cars Under ₹10 Lakhs</h2>
       <p>
-          If you're looking for **supercars under ₹50 lakhs**, we have an exciting range of options for you. From powerful BMW M-series to Audi RS models, our selection ensures that you experience the thrill of driving a high-performance vehicle without stretching your budget.
+        We understand that luxury should be accessible to all. Our collection of <strong>affordable luxury cars under ₹10 lakhs</strong> includes stylish sedans and SUVs from premium brands like <strong>Mercedes, Audi, and BMW</strong>. These pre-owned vehicles are maintained in top condition and available at unbeatable prices.
       </p>
-      <h2>Affordable Luxury Cars Under 10 Lakhs</h2>
-      <p>
-          We understand that luxury should be accessible to all. Our collection of **affordable luxury cars under ₹10 lakhs** includes stylish sedans and SUVs from premium brands like **Mercedes, Audi, and BMW**. These pre-owned vehicles are maintained in top condition and available at unbeatable prices.
-      </p>
+    </div>
+
+    <div class="test-drive-section">
       <h2>Test Drive & Booking</h2>
       <p>
-          Nothing compares to the feeling of sitting behind the wheel of your dream car. At **Wall Street Wheels**, we offer test drives so you can experience the **power, luxury, and comfort** before making your final decision. Visit our showroom in **Vandalur, Chennai**, or contact us to schedule an appointment today.
+        Nothing compares to the feeling of sitting behind the wheel of your dream car. At <strong>Wall Street Wheels</strong>, we offer test drives so you can experience the <strong>power, luxury, and comfort</strong> before making your final decision. Visit our showroom in <strong>Vandalur, Chennai</strong>, or contact us to schedule an appointment today.
       </p>
+    </div>
+
+    <div class="social-media-section">
       <h2>Follow Us on Social Media</h2>
       <p>
-          Stay updated with our latest arrivals, exclusive offers, and automotive news by following us on **Instagram & Twitter (X)**. We also share exciting videos of our luxury cars to help you make the perfect choice.
+        Stay updated with our latest arrivals, exclusive offers, and automotive news by following us on:
       </p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/wall_street_wheels/" target="_blank" class="social-link instagram">Instagram</a>
+        <a href="https://x.com/street_wal87754" target="_blank" class="social-link twitter">Twitter (X)</a>
+        <a href="https://www.facebook.com/share/153mdv9cVb" target="_blank" class="social-link facebook">Facebook</a>
+        <a href="https://www.youtube.com/@WallStreetWheels" target="_blank" class="social-link youtube">YouTube</a>
+      </div>
+    </div>
   </div>
-  
+
   <div class="contact-info">
-      📍 **Location:** Vandalur, Chennai – **Pincode:** 600048 <br>
-      📧 **Email:** <a href="mailto:wall.street.wheels07@gmail.com">wall.street.wheels07@gmail.com</a> <br>
-      📸 **Instagram:** <a href="https://www.instagram.com/wall_street_wheels/" target="_blank">@wall_street_wheels</a> <br>
-      🐦 **Twitter (X):** <a href="https://x.com/street_wal87754" target="_blank">@street_wal87754</a>
+    <h2>Contact Us</h2>
+    <p>📍 <strong>Location:</strong> Vandalur, Chennai – <strong>Pincode:</strong> 600048</p>
+    <p>📧 <strong>Email:</strong> <a href="mailto:wall.street.wheels07@gmail.com">wall.street.wheels07@gmail.com</a></p>
   </div>
 </div>
   

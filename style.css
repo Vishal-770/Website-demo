@@ -813,16 +813,55 @@ margin: auto;
   color: #4CAF50;
 }
 /* Carousel Section */
+/* Heading styles */
+.text-center h1 {
+  color: #ffffff; /* White color */
+  font-size: 2.5rem; /* Default size for larger screens */
+  font-weight: bold; /* Bold text */
+  margin-bottom: 0.5rem; /* Space below the heading */
+}
+
+.text-center p {
+  color: #e0e0e0; /* Light gray color */
+  font-size: 1.2rem; /* Default size for larger screens */
+  margin-bottom: 2rem; /* Space below the subheading */
+}
+
+/* Carousel Heading */
+.carousel-heading {
+  padding: 2rem 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  backdrop-filter: blur(5px); /* Blur effect */
+}
+
+.carousel-heading h1 {
+  color: #ffffff; /* White text */
+  font-size: 2.5rem; /* Default size for larger screens */
+  font-weight: bold; /* Bold text */
+  margin-bottom: 0.5rem; /* Space below the heading */
+}
+
+.carousel-heading p {
+  color: #e0e0e0; /* Light gray text */
+  font-size: 1.2rem; /* Default size for larger screens */
+  margin-bottom: 0; /* Remove margin-bottom */
+}
+
+/* Carousel Section */
 #carousel-section {
-  margin: 40px 0;
+  scale: 0.9;
+  margin: 0 auto 40px; /* Center the carousel and add margin at the bottom */
   border-radius: 10px;
+  
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 1200px; /* Limit carousel width for better focus */
 }
 
 .carousel-item img {
   height: 500px; /* Adjust height as needed */
   object-fit: cover;
+  width: 100%;
 }
 
 .carousel-caption {
@@ -834,11 +873,13 @@ margin: auto;
 .carousel-caption h5 {
   font-size: 2rem;
   color: #4CAF50; /* Green color for heading */
+  margin-bottom: 0.5rem;
 }
 
 .carousel-caption p {
   font-size: 1.2rem;
   color: #e0e0e0; /* Light text color */
+  margin-bottom: 0;
 }
 
 .carousel-control-prev-icon,
@@ -856,7 +897,7 @@ margin: auto;
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .carousel-item img {
-    height: 300px; /* Smaller height for mobile */
+    height: 300px; /* Smaller height for tablets */
   }
 
   .carousel-caption h5 {
@@ -866,36 +907,128 @@ margin: auto;
   .carousel-caption p {
     font-size: 1rem;
   }
-}
-/* Heading styles */
-.text-center h1 {
-  color: #ffffff; /* White color */
-  font-size: 2.5rem; /* Default size for larger screens */
-  font-weight: bold; /* Bold text */
-  margin-bottom: 0.5rem; /* Space below the heading */
-}
 
-.text-center p {
-  color: #e0e0e0; /* Light gray color */
-  font-size: 1.2rem; /* Default size for larger screens */
-  margin-bottom: 2rem; /* Space below the subheading */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .text-center h1 {
+  .carousel-heading h1 {
     font-size: 2rem; /* Medium size for tablets */
   }
-  .text-center p {
+
+  .carousel-heading p {
     font-size: 1rem; /* Medium size for tablets */
   }
 }
 
 @media (max-width: 480px) {
-  .text-center h1 {
+  .carousel-heading h1 {
     font-size: 1.5rem; /* Smaller size for mobile */
   }
-  .text-center p {
+
+  .carousel-heading p {
     font-size: 0.9rem; /* Smaller size for mobile */
+  }
+}
+.copyright-section {
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+  color: #e0e0e0; /* Light gray text */
+  padding: 1rem 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Light border */
+  backdrop-filter: blur(5px); /* Blur effect */
+}
+
+.copyright-text {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.copyright-text a {
+  color: #4CAF50; /* Green color for links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.copyright-text a:hover {
+  color: #45a049; /* Darker green on hover */
+}
+
+.separator {
+  margin: 0 0.5rem;
+  color: #666; /* Gray color for separator */
+}
+/* Meet Our Team Section */
+.team-section {
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  backdrop-filter: blur(5px); /* Blur effect */
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 2.5rem;
+  color: #ffffff; /* White text */
+  margin-bottom: 0.5rem;
+}
+
+.team-subheading {
+  font-size: 1.2rem;
+  color: #e0e0e0; /* Light gray text */
+  margin-bottom: 2rem;
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.team-card {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.team-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.team-card h3 {
+  font-size: 1.5rem;
+  color: #ffffff; /* White text */
+  margin-bottom: 0.5rem;
+}
+
+.team-card .designation {
+  font-size: 1rem;
+  color: #4CAF50; /* Green text */
+  margin-bottom: 0.5rem;
+}
+
+.team-card .description {
+  font-size: 0.9rem;
+  color: #e0e0e0; /* Light gray text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .team-card {
+    width: 45%; /* Two cards per row on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .team-card {
+    width: 90%; /* One card per row on mobile */
   }
 }
